@@ -32,8 +32,9 @@ TASK DELEGATION
 4) figure out how to pull from a database when deployed to heroku
 
 5) (James) Twitter info
-	- get tweets into MySQL
-	- live tweet feed
-	- d3 bubble force chart
+	- get tweets into MySQL (complete)
 	- user query tweets by keyword
+	- live tweet feed ()
+	- d3 bubble force chart
+	- trump VS teenage girl
 	- route from main page to see twitter info
