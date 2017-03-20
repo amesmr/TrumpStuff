@@ -28,3 +28,12 @@ TASK DELEGATION
 2) create file structure
 
 3) ensure everyone is up to speed with git collaboration
+
+4) figure out how to pull from a database when deployed to heroku
+
+5) (James) Twitter info
+	- get tweets into MySQL
+	- live tweet feed
+	- d3 bubble force chart
+	- user query tweets by keyword
+	- route from main page to see twitter info
