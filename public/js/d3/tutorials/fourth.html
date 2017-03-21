@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>fourth</title>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var dataset = [5, 10, 15, 20, 25];
+        var width = 700;
+        var height = 400;
+
+        var svg = d3.select("body").append("svg").attr("height", height + "px").attr("width", width + "px");
+        var circles = svg.selectAll("circle").data(dataset).enter().append("circle").style("stroke", "red").style(
+            "fill", "none");
+        circles.attr("cx", function (d, i) { // d and i are automatically populated for us
+                return (i * 25) + 25;
+            })
+            .attr("cy", height / 2)
+            .attr("r", function (d) {
+                return d;
+            })
+            .text(function (d) {
+                return d;
+            })
+            .attr("text-anchor", "middle")
+            .text(function (d) {
+                return d.name;
+            });
+    </script>
+</body>
+
+</html>
