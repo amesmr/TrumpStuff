@@ -1,3 +1,8 @@
 div.jumbotron {
     text-align: center;
 }
+
+.liquidFillGaugeText {
+    font-family: Helvetica;
+    font-weight: bold;
+}
