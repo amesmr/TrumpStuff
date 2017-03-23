@@ -15,7 +15,7 @@
 
     <!--Popup Contact Bar-->
     <link rel="stylesheet" type="text/css" href="css/component.css" />
-
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
         // Validating Empty Field
@@ -50,6 +50,7 @@
     <div id="pagewrap">
 
         <section id="content">
+            <svg id="fillgauge2" width="40%" height="200" onclick="gauge2.update(NewValue());"></svg>
             <h2>Queried Tweets</h2>
             <p>Add search bar and tweet autofill segment</p>
         </section>
@@ -57,7 +58,8 @@
         <section id="middle">
             <h2>Videos</h2>
             <p>When smaller view, last column goes under second, if smaller, columns change accordingly. (ie - 1,2,3 as scroll
-                down)</p>
+                down)
+            </p>
             <p>Fill with videos</p>
         </section>
 
@@ -118,9 +120,7 @@
         </footer>
 
     </div>
-
-    <script src="js/popup.js"></script>
-    <script src="js/popup.js"></script>
+   <script src="js/fluid.js" language="JavaScript"></script>
 
 
 </body>
