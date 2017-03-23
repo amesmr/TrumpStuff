@@ -1,0 +1,60 @@
+* {
+  font-family: 'Lato', sans-serif;
+  line-height: 20px;
+}
+  /*text-transform:uppercase;*/
+.fixed {
+  position: fixed;
+}
+
+.overlay {
+  z-index: 1;
+}
+.cc-contactpop { 
+  background-color:#506a85;
+  color:#fff;
+  width:350px;
+  bottom: 0;
+  right: 50px;
+  padding-bottom:15px;
+  border-radius: 6px 6px 0px 0px;
+  text-decoration:none;
+}
+.cc-contactpop h1 {
+  text-align:center;
+  color:#fff;
+  text-shadow:none;
+  font-size:19px;
+  font-weight:700;
+  background-color:#506a85;
+  margin:0;
+  padding:15px;
+  cursor:pointer;
+}
+
+.cc-contactpop p {
+  text-align:center;
+  padding:10px 15px;
+  border:none;
+
+}
+.cc-contactpop i {
+  position:absolute; 
+  top:0px; 
+  right:0px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 15px; 
+  padding:20px;
+  cursor:pointer;
+}
+
+.cc-contactpop a {
+	font-size: 0.875em;	
+  text-decoration:none;
+	background:transparent;
+	width: 100%;
+	color: #fff;
+	cursor: pointer;
+  border:none;
+}

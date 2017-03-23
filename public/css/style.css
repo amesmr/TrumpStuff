@@ -1,3 +1,9 @@
 div.jumbotron {
     text-align: center;
+    background-image: url("../images/white-house-logo.jpg");
 }
+
+
+/*need to style the logo of the white house to fit into jumbotron*/
+/*take the images of trump and make them circles to put into the corners of the jumbotron*/
+/*add a div for the video */

@@ -5,22 +5,119 @@
     <title>Trump Stuff</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
+    <!-- Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!--Popup Contact Bar-->
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+        
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript">
+    // Validating Empty Field
+function check_empty() {
+if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
+alert("Fill All Fields !");
+} else {
+document.getElementById('form').submit();
+alert("Form Submitted Successfully...");
+}
+}
+//Function To Display Popup
+function div_show() {
+document.getElementById('popupcontactbar').style.display = "block";
+}
+//Function to Hide Popup
+function div_hide(){
+document.getElementById('popupcontactbar').style.display = "none";
+}
+        </script>
+
 </head>
 
-<body>
-    <div class="jumbotron">
+<body class="body">
+    <div class="jumbotron neutral">
         <div class="container">
-            <h1>Trump Stuff!</h1>
-            
+            <h1>Trump Stuff!</h1> 
         </div>
     </div>
 
-    
+    <div id="pagewrap">
 
+    <section id="content">
+        <h2>Queried Tweets</h2>
+        <p>Add search bar and tweet autofill segment</p>
+    </section>
+    
+    <section id="middle">
+        <h2>Videos</h2>
+        <p>When smaller view, last column goes under second, if smaller, columns change accordingly. (ie - 1,2,3 as scroll down)</p>
+        <p>Fill with videos</p>
+    </section>
+
+    <aside id="sidebar">
+        <h2>Tweet Feed (live)</h2>
+        <p>Autopopulate with tweets here</p>
+        <p>Tweet</p>
+        <p>Tweet, etc.</p>
+    </aside>
+    
+    <!--Trigger/open the modal-->
+<button id="myBtn">
+    <!--<img src="#">-->
+</button>
+
+        <!--Modal itself-->
+    <div id="myModal" class="modal">
+
+        <!--Content of popup/modal-->
+        <div id="mainoverwrite" class="modal-body">
+
+                <span class="close">X</span>
+
+        <section id="contact-form">
+                            
+      <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Sign-up to get Donald's tweets in the real time!</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="Name">Name</label>
+                            <input type="text" class="form-control" id="sign-up name">
+                        </div>
+                        <div class="form-group">
+                            <label for="DOB">Date of birth</label>
+                            <input type="date" class="form-control" id="DOB">
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email address</label>
+                            <input type="text" class="form-control" id="sign-up email">
+                        </div>
+                        <button type="submit" class="btn btn-primary submit">Submit</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+                            
+                        </section>
+                        </div>
+    </div>
+    <footer>
+        <h4>Footer</h4>
+        <p>Mimic the three sections above</p>
+    </footer>
+
+</div>
+
+        <script src="../public/js/animation/myAnimation.js"></script>
 
 
 </body>
