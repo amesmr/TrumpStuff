@@ -1,0 +1,308 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body { 
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+}
+.body {
+	background-color:#003366;
+}
+.container {
+	background-color:#767570;
+	padding-bottom:8px;
+}
+.neutral {
+	background-color:#D8D5C9 !important;
+}
+/* STRUCTURE */
+
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 0px auto;
+	background-color:#D8D5C9;
+}
+header {
+	height: 100px;
+	padding: 0 15px;
+	text-align:center;
+	background-color:#767570;
+
+}
+#content {
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
+	text-align:center;
+	background-color:#D8D5C9 !important;
+}
+
+#middle {
+	width: 294px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+	text-align:center;
+}
+
+#sidebar {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+	text-align:center;
+	background-color:#D8D5C9 !important;
+}
+footer {
+	clear: both;
+	padding: 0 15px;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+	
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+
+	header, footer {
+		padding: 1% 4%;
+	}
+}
+
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+	#content {
+		width: auto;
+		float: none;
+	}
+	
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+	
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+
+	header {
+		height: auto;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	#sidebar {
+		display: none;
+	}
+
+}
+
+
+#content {
+	background: #f8f8f8;
+}
+#sidebar {
+	background: #f0efef;
+}
+header, #content, #middle, #sidebar {
+	margin-bottom: 5px;
+}
+
+#pagewrap, header, #content, #middle, #sidebar, footer {
+	border: solid 1px #ccc;
+}
+
+/********************MODAL POP UP FORMATTING********************/
+#myBtn {
+    position: fixed;
+    bottom:80px;
+    right:20px;
+    font-size:36px;
+    line-height:100%;
+    background-color:#D8D5C9;
+    color:#000;
+    padding:3px;
+    border-radius:5px;
+    opacity: .8;
+}
+
+#myBtn:hover {
+    color:#1abb9c;
+    background-color:#506a85;
+    opacity: 1;
+}
+
+
+/* The Modal (background) */
+.modal {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    border-radius:3px;
+    color:#003366;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    width: 282px; /* Full width */
+    height: 390.78px; /* Full height */
+    background-color:#003366;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #003366;
+    box-shadow: 0 3px 13px 0 rgba(0,0,0,0.1);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Modal Body */
+.modal-body {
+    text-align: center;
+    box-shadow: 0 3px 13px 0 rgba(0,0,0,0.1);
+    border-style: solid;
+    border-width: 1px;
+    border-color: #003366;
+    border-radius: 4px;
+    z-index: 9000;
+    padding: 20px;
+    background-color: #003366;
+}
+
+#contact-form {    
+    background-color:#D8D5C9;
+}
+                            
+.panel.panel-default {
+        background-color:#D8D5C9;
+}
+.panel-heading {
+    background-color:#D8D5C9 !important;
+        color:#003366 !important;
+}
+.panel-title{    
+    background-color:#D8D5C9;
+}
+.panel-body {    
+    background-color:#D8D5C9;
+}
+
+/* Close Button */
+.close {
+    color: #D8D5C9;
+    float: right;
+    font-size: 20px;
+    font-weight: 800px;
+    display:inline-block;
+    padding: 6px 6px;
+    outline:0;
+    font-size:14px;
+    line-height:1.428571429;
+    vertical-align:middle;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color:#767570;
+    background-color:#D8D5C9;
+    opacity: 1;
+}
+
+/*Modal Submit Button
+button.btn.btn-primary.submit {
+}*/
+
+button.send:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color:#1abb9c;
+    background-color:#506a85;
+    opacity: 1;
+}
+
+
+.form-control {
+    /*Overrode bootstrap so not using 
+    display:block;
+    padding: 6px 12px;
+    min-width:240px;
+    height:auto;
+    border-style:solid;
+    border-width:1px;*/
+    border-color:#003366 !important;
+    background-color:#D8D5C9 !important;
+   /* outline:0;
+    color:#000;
+    font-size:14px;
+    line-height:1.428571429;
+    vertical-align:middle;*/
+}*/
+
+input#sign-up name.form-control {
+    padding: 0.5em;
+    font-family:inherit;
+    box-sizing:border-box;
+    user-select:text;
+    cursor:auto;
+    border-radius:3px;
+    background-color:#D8D5C9 !important;
+}
+
+input#sign-up email.form-control {
+    padding: 0.5em;
+    font-family:inherit;
+    box-sizing:border-box;
+    user-select:text;
+    cursor:auto;
+    border-radius:3px;
+    background-color:#D8D5C9 !important;
+}
+
+input#DOB.form-control {
+    padding: 0.5em;
+    font-family:inherit;
+    box-sizing:border-box;
+    user-select:text;
+    cursor:auto;
+    border-radius:3px;
+    background-color:#D8D5C9;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
