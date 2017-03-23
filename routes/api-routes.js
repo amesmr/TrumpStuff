@@ -23,13 +23,13 @@ module.exports = function (app) {
     });
 
     // Get route for returning posts of a specific category
-    app.get("/api/posts/category/:category", function (req, res) {
+    app.get("/api/posts/:rating", function (req, res) {
         // Add sequelize code to find all posts where the category is equal to req.params.category,
         // return the result to the user with res.json
 
         db.Post.findAll({
                 where: {
-                    category: req.params.category
+                    category: req.params.rating
                 }
             })
             .then(function (result) {
@@ -54,10 +54,10 @@ module.exports = function (app) {
     // POST route for saving a new post
     app.post("/api/posts", function (req, res) {
         // Add sequelize code for creating a post using req.body,
-        // then return the result using res.json        
+        // then return the result using res.json
         var item = req.body
         db.Post.create({
-            title: item.title,
+            tiquotetle: item.title,
             body: item.body,
             complete: item.category
         }).then(function (result) {
@@ -67,7 +67,7 @@ module.exports = function (app) {
 
     // DELETE route for deleting posts
     app.delete("/api/posts/:id", function (req, res) {
-        // Add sequelize code to delete a post where the id is equal to req.params.id, 
+        // Add sequelize code to delete a post where the id is equal to req.params.id,
         // then return the result to the user using res.json
         console.log(req.params.id);
         db.Post.destroy({
