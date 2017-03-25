@@ -17,21 +17,21 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+// btn.onclick = function() {
+//     modal.style.display = "block";
+// }
 
-// When the user clicks on the button<span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
+// // When the user clicks on the button<span> (x), close the modal
+// span.onclick = function() {
+//     modal.style.display = "none";
+// }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
     var config1 = liquidFillGaugeDefaultSettings();
     config1.circleColor = "black";
     config1.textColor = "red";
