@@ -12,11 +12,8 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
-    // GET route for getting all of the posts
-    app.get("/api/posts", function (req, res) {
-        // Add sequelize code to find all posts, and return them to the user with res.json
-
-        db.Post.findAll({})
+    app.get("/api/alltweets", function (req, res) {
+        db.tweets.findAll({})
             .then(function (result) {
                 return res.json(result);
             });

@@ -6,15 +6,41 @@
     <svg id="fillgauge6" width="19%" height="200" onclick="gauge6.update(NewValue());"></svg>*/}
 
     // var gauge1 = loadLiquidFillGauge("fillgauge1", 55); 
+
+    // Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on the button<span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
     var config1 = liquidFillGaugeDefaultSettings();
     config1.circleColor = "black";
     config1.textColor = "red";
-    config1.waveTextColor = "#FF4444";
+    config1.waveTextColor = "red";
     config1.waveColor = "blue";
     config1.circleThickness = 0.2;
     config1.textVertPosition = 0.2;
     config1.waveAnimateTime = 750;
-    var gauge2 = loadLiquidFillGauge("fillgauge2", 28, config1);
+    var gauge2 = loadLiquidFillGauge("fillgauge2", 54, config1);
     var config2 = liquidFillGaugeDefaultSettings();
     config2.circleColor = "#D4AB6A";
     config2.textColor = "#553300";

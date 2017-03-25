@@ -14,9 +14,15 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+    res.sendFile(path.join(__dirname, "../public/main.html"));
   });
 
+ app.get("/graph/area", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/graphs.html"));
+  });
+   app.get("/graph/bar", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/bargraph.html"));
+  });
   // Route to the cms page
   app.get("/cms", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/cms.html"));

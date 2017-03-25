@@ -67,7 +67,7 @@ var connection = mysql.createConnection({
     port: 3306,
     user: "jjwguest",
     password: "platinum",
-    database: "trump_archived"
+    database: "trump_real"
 });
 
 var query = process.argv[2];
@@ -75,15 +75,15 @@ console.log(query + "\n");
 getAllRes();
 
 function getAllRes() {
-    connection.query("SELECT `tweet_number`, `tweet_timestamp`, `tweet`, COUNT(*) FROM `trump_tweets` WHERE tweet LIKE '%" + query + "%' GROUP BY tweet_number;",
+    connection.query("SELECT tweet, tweet_date, COUNT(*) FROM `trump_tweets` WHERE tweet LIKE '%" + query + "%' GROUP BY tweet_number;",
         function(err, res) {
             if (err) throw err;
 
             var n = res.length;
             for (var i = 0; i < n; i++) {
                 console.log("\n\n-----------------------------------------\n\n");
-                console.log(res[i].tweet_timestamp)
-                console.log(i + ')' + res[i].tweet);
+                console.log(res[i].tweet_date)
+                console.log(i + ') ' + res[i].tweet);
 
             }
            
