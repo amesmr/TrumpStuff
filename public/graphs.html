@@ -20,7 +20,7 @@
                     <div class="panel-heading">
                         <strong><h6 class="panel-title titleAlign">Trump Twitter Follower Trends</h6></strong>
                     </div>
-                    <div class="panel-body firstChartPanel">
+                    <div class="panel-body firstChartPanel" id="toolTipLanding">
                         <svg class="areaChart" width="975" height="420"></svg>
                     </div>
                 </div>
@@ -30,8 +30,8 @@
                             <div class="panel-heading">
                                 <strong><h6 class="panel-title titleAlign">Keyword Analysis</h6></strong>
                             </div>
-                            <div class="panel-body" id="toolTipLanding">
-                                <svg class="chart"></svg>
+                            <div class="panel-body">
+                                <svg class="barChart" width="975" height="420"></svg>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,8 @@
     </div>
     <script src="https://d3js.org/d3.v4.min.js">
     </script>
-    <script src="/js/graphs.js">
+    <script src="/js/grapharea.js"></script>
+    <script src="/js/graphbar.js">
     </script>
     <script>
         var egoValue = 127.87;
