@@ -16,36 +16,49 @@
 
 <body class="body">
     <div class="jumbotron neutral">
-       
-            <h1>Trump Stuff!</h1>
-            
-            <button type="button" id="" class="btn btn-primary btn-lg">Sign-up</button>
-            <button type="button" id="" class="btn btn-primary btn-lg">Login</button>
-            
+
+        <h1>Trump Stuff!</h1>
+
+        <button type="button" id="" class="btn btn-primary btn-lg">Sign-up</button>
+        <button type="button" id="" class="btn btn-primary btn-lg">Login</button>
+
     </div>
 
     <div id="pagewrap">
 
         <section id="content">
             <h2>Queried Tweets (Add search bar how?)</h2>
-            <a class="twitter-timeline"  href="https://twitter.com/hashtag/trump" data-widget-id="845610628609925124">#trump Tweets</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-       
+            <a class="twitter-timeline" href="https://twitter.com/hashtag/trump" data-widget-id="845610628609925124">#trump Tweets</a>
+            <script>
+                ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");
+            </script>
+
         </section>
 
         <section id="middle">
-         <!--<svg id="fillgauge2" width="40%" height="200" onclick="gauge2.update(NewValue());"></svg>
+            <!--<svg id="fillgauge2" width="40%" height="200" onclick="gauge2.update(NewValue());"></svg>
             hange back after-->
             <h2>Videos</h2>
             <p>When smaller view, last column goes under second, if smaller, columns change accordingly. (ie - 1,2,3 as scroll
                 down)
             </p>
-            <iframe width="294" height="165" src="https://www.youtube.com/embed/x2YLS80Nmls?list=PLmOU536QRyzjvq7NnQXK5ADoQJrBgWVfu&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="294" height="165" src="https://www.youtube.com/embed/x2YLS80Nmls?list=PLmOU536QRyzjvq7NnQXK5ADoQJrBgWVfu&amp;showinfo=0"
+                frameborder="0" allowfullscreen></iframe>
         </section>
 
         <aside id="sidebar">
             <h2>What's the Donald Saying?</h2>
-<a class="twitter-timeline" data-width="260" data-height="600" data-theme="dark" href="https://twitter.com/realDonaldTrump">Tweets by realDonaldTrump</a> <script async src="https://
+            <a class="twitter-timeline" data-width="260" data-height="600" data-theme="dark" href="https://twitter.com/realDonaldTrump">Tweets by realDonaldTrump</a>
+            <script async src="https://
 platform.twitter.com/widgets.js" charset="utf-8"></script>
         </aside>
 
@@ -125,23 +138,24 @@ platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
         <!--********************MODAL END**************************-->
-        
+
         <!--**********************FOOTER***************************-->
         <footer id="footer">
-                    <div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p>Copyright &copy;2017 Trump Quotes. All Rights Reserved.</p>
-                            </div>
-                             <div class="col-md-6">
-                                <p>Developed by <a href="#">Trump Quotes</a></p>
-                            </div>
-                        </div>
+            <div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Copyright &copy;2017 Trump Quotes. All Rights Reserved.</p>
                     </div>
-            </footer>
+                    <div class="col-md-6">
+                        <p>Developed by <a href="#">Trump Quotes</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-
-   <script src="js/fluid.js" language="JavaScript"></script>
+    <script src="https://d3js.org/d3.v4.min.js">
+    </script>
+    <script src="js/fluid.js" language="JavaScript"></script>
 
 
 </body>
