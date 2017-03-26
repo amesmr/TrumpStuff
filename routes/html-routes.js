@@ -23,6 +23,9 @@ module.exports = function(app) {
    app.get("/graph/bar", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/bargraph.html"));
   });
+    app.get("/force", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/force2.html"));
+  });
   // Route to the cms page
   app.get("/cms", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/cms.html"));

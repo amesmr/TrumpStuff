@@ -25,8 +25,6 @@
             }
             console.log(dataArray);
 
-
-
             var margin = {
                 top: 20,
                 right: 20,
@@ -116,7 +114,6 @@
                 .attr("transform", "rotate(-90)")
                 .attr("y", 6)
                 .attr("dy", "0.71em")
-                .attr("text-anchor", "end")
                 .text("FAVORITED");
 
             svg.selectAll("dot")

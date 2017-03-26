@@ -1,7 +1,6 @@
 body {
     color: white;
-    background-image: url("../images/blackmetal.jpg");
-    background-size: cover;
+ background-color: black;
     font-family: 'Karla', sans-serif;
 }
 
@@ -65,6 +64,16 @@ svg {
 
 }
 
+.barChart{
+    padding-left: 10px;
+}
+
+
+.secondChartPanel{
+    padding: 10px 10px 5px 25px;
+
+}
+
 .xaxisWhite text {
     fill: white;
 }
@@ -93,9 +102,6 @@ svg {
     padding: 10px;
 }
 
-.bar {
-    fill: steelblue;
-}
 
 .axis text {
     font: 10px sans-serif;
@@ -184,11 +190,11 @@ div.tooltip {
 }
 
 .bar {
-  fill: steelblue;
+  fill: blue;
 }
 
 .bar:hover {
-  fill: brown;
+  fill: red;
 }
 
 .axis--x path {
