@@ -16,8 +16,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static(path.join(__dirname, "./public")));
 // Set Handlebars.
 var exphbs = require("express-handlebars");
-var viewsPath = path.join(__dirname, "public/views");
-app.engine("handlebars", exphbs({ viewsPath : "main" }));
+app.engine("handlebars", exphbs({ defaultLayout: 'main'}));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
