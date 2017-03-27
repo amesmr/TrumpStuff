@@ -10,6 +10,7 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -17,7 +18,7 @@
 <body class="body">
     <div class="jumbotron neutral">
 
-        <h1>Trump Stuff!</h1>
+        <h1 class="animate infinite rubberBand">Trump Stuff!</h1>
 
         <button type="button" id="" class="btn btn-primary btn-lg">Sign-up</button>
         <button type="button" id="" class="btn btn-primary btn-lg">Login</button>
@@ -27,8 +28,8 @@
     <div id="pagewrap">
 
         <section id="content">
-            <h2>Queried Tweets (Add search bar how?)</h2>
-            <a class="twitter-timeline" href="https://twitter.com/hashtag/trump" data-widget-id="845610628609925124">#trump Tweets</a>
+            <h2>Trending #Trump Tweets</h2>
+            <a class="twitter-timeline" href="https://twitter.com/hashtag/trump" data-width="238" data-height="600" data-theme="dark" data-widget-id="845610628609925124"></a>
             <script>
                 ! function (d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0],
@@ -45,13 +46,11 @@
         </section>
 
         <section id="middle">
+            <h2>Do We Approve?</h2>
             <svg id="fillgauge2" width="40%" height="200" onclick="gauge2.update(NewValue());"></svg>
 
             <h2>Videos</h2>
-            <p>When smaller view, last column goes under second, if smaller, columns change accordingly. (ie - 1,2,3 as scroll
-                down)
-            </p>
-            <iframe width="294" height="165" src="https://www.youtube.com/embed/x2YLS80Nmls?list=PLmOU536QRyzjvq7NnQXK5ADoQJrBgWVfu&amp;showinfo=0"
+            <iframe width="345" height="318" src="https://www.youtube.com/embed/x2YLS80Nmls?list=PLmOU536QRyzjvq7NnQXK5ADoQJrBgWVfu&amp;showinfo=0"
                 frameborder="0" allowfullscreen></iframe>
         </section>
 

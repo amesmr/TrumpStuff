@@ -5,16 +5,41 @@ div.jumbotron.neutral{
     background-repeat: no-repeat;
     background-position: center;
 }
+
 /*Title*/
 h1 {
     font-family: 'Luckiest Guy', cursive !important;
     color: red !important;
     text-shadow: 3px 2px black;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 4s;
+    -webkit-animation-iteration-count: 3;
 }
 span {
     transform: translateX(200px);
     -webkit-animation-name: hinge;
     
+}
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 /*jumbotron buttons*/
 button.btn.btn-primary.btn-sm {
@@ -204,7 +229,7 @@ header {
 
 }
 #content {
-	width: 290px;
+	width: 270px;
 	float: left;
 	padding: 5px 15px;
 	text-align:center;
@@ -212,7 +237,7 @@ header {
 }
 
 #middle {
-	width: 294px; /* Account for margins + border values */
+	width: 378px; /* Account for margins + border values - was seet to 294*/
 	float: left;
 	padding: 5px 15px;
 	margin: 0px 5px 5px 5px;
