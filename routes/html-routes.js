@@ -34,18 +34,7 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/blog.html"));
     });
 
-    //     var response;
-    // app.get("/quotes", function (req, res) {
-    //     // app.get("/api/quotes", function (req, res) {
-    //     //     response = res;
-    //     // });
-    //     res.render("index", {
-    //         quotes: res
-    //     });
-    // });
     app.get("/quotes", function (req, res) {
-        // Add sequelize code to find all posts, and return them to the user with res.json
-
         db.quotes.findAll({})
             .then(function (result) {
                 res.render("index", {
@@ -56,9 +45,6 @@ module.exports = function (app) {
     });
 
     app.get("/quotes/rating/:rating", function (req, res) {
-        // Add sequelize code to find all posts where the category is equal to req.params.category,
-        // return the result to the user with res.json
-
         db.quotes.findAll({
                 where: {
                     rating: req.params.rating
@@ -72,8 +58,6 @@ module.exports = function (app) {
     });
 
     app.get("/quotes/id/:id", function (req, res) {
-        // Add sequelize code to find a single post where the id is equal to req.params.id,
-        // return the result to the user with res.json
         db.quotes.findAll({
                 where: {
                     id: req.params.id
