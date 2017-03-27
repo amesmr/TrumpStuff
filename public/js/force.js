@@ -2,7 +2,7 @@ var forceObj = {
             nodes: [{
 
                     name: "root",
-                    color: "white",
+                    color: "black",
                     size: 20
 
                 },
@@ -11,40 +11,40 @@ var forceObj = {
                 {
                     name: "himself",
                     color: "red",
-                    size: 15
+                    size: 10
 
 
                 },
                 {
                     name: "defenses",
                     color: "green",
-                    size: 15
+                    size: 10
 
                 },
                 {
                     name: "celebrity",
                     color: "yellow",
-                    size: 15
+                    size: 10
 
                 }, {
                     name: "debates",
                     color: "brown",
-                    size: 15
+                    size: 10
 
                 }, {
                     name: "clintons",
                     color: "grey",
-                    size: 15
+                    size: 10
 
                 }, {
                     name: "nicknames",
                     color: "lawngreen",
-                    size: 15
+                    size: 10
 
                 }, {
                     name: "one liners",
                     color: "blue",
-                    size: 15
+                    size: 10
 
                 },
 
@@ -55,82 +55,82 @@ var forceObj = {
                 {
                     name: "Little Marco",
                     color: "violet",
-                    size: 10,
+                    size: 5,
                     
                 }, {
                     name: "Lyin Ted",
                     color: "violet",
-                    size: 10,
+                    size: 5,
                     
                 }, {
                     name: "Crooked Hillary",
                     color: "violet",
-                    size: 10,
+                    size: 5,
                     
                 }, {
                     name: "Low energy Jeb",
                     color: "violet",
-                    size: 10,
+                    size: 5,
                     
                 }
             ],
             links: [{
                     source: "root",
                     target: "celebrity",
-                    value: 16,
-                    distance: 100
+                    value: 4,
+                    distance: 75
                 },
                 {
                     source: "root",
                     target: "himself",
-                    value: 16,
-                    distance: 100
+                    value: 4,
+                    distance: 75
                 },
                 {
                     source: "root",
                     target: "clintons",
-                    value: 16,
-                    distance: 100
+                    value: 4,
+                    distance: 75
                 }, {
                     source: "root",
                     target: "defenses",
-                    value: 16,
-                    distance: 100
+                    value: 4,
+                    distance: 75
                 }, {
                     source: "root",
                     target: "nicknames",
-                    value: 16,
-                    distance: 100
+                    value: 4,
+                    distance: 75
                 }, {
                     source: "root",
                     target: "debates",
-                    value: 16,
-                    distance: 100
+                    value: 4,
+                    distance: 75
                 }, {
                     source: "root",
                     target: "one liners",
-                    value: 16,
-                    distance: 100
+                    value: 4,
+                    distance: 75
                 }, {
                     source: "nicknames",
                     target: "Little Marco",
-                    value: 16,
-                    distance: 50
+                    value: 4,
+                    distance: 25
                 }, {
                     source: "nicknames",
                     target: "Crooked Hillary",
-                    value: 16,
-                    distance: 50
+                    value: 4,
+                    distance: 25
                 }, {
                     source: "nicknames",
                     target: "Lyin Ted",
-                    value: 16,
-                    distance: 50
+                    value: 4,
+                    distance: 25
                 }, {
                     source: "nicknames",
                     target: "Low energy Jeb",
-                    value: 16,
-                    distance: 50
+                    value: 4,
+                    distance: 25
                 }
             ]
         };
