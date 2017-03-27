@@ -1,7 +1,6 @@
 body {
     color: white;
-    background-image: url("../images/blackmetal.jpg");
-    background-size: cover;
+    background-color: black;
     font-family: 'Karla', sans-serif;
 }
 
@@ -60,9 +59,16 @@ svg {
     padding 10px;
 }
 
-.firstChartPanel{
+.firstChartPanel {
     padding: 10px 10px 5px 10px;
+}
 
+.barChart {
+    padding-left: 10px;
+}
+
+.secondChartPanel {
+    padding: 10px 10px 5px 25px;
 }
 
 .xaxisWhite text {
@@ -91,10 +97,6 @@ svg {
 
 .pad {
     padding: 10px;
-}
-
-.bar {
-    fill: steelblue;
 }
 
 .axis text {
@@ -138,15 +140,15 @@ div.tooltip {
 }
 
 .tAssetHeadLeft {
-    width: 141px;
+    width: 130px;
 }
 
 .tAssetHeadCenter {
-    width: 79px;
+    width: 83px;
 }
 
 .tAssetHeadRight {
-    width: 98px;
+    width: 95px;
 }
 
 .assetBin {
@@ -159,26 +161,48 @@ div.tooltip {
     margin-left: 5px;
     padding: 2px;
     margin-bottom: 4px;
-
 }
 
-.symbol{
+.symbol {
     margin-left: 50px;
     color: white;
 }
-.assetValue{
+
+.assetValue {
     margin-left: 40px;
 }
 
-.bankrupt{
+.bankrupt {
     margin-left: 38px;
     color: red;
 }
 
-.redVal{
+.redVal {
     color: red;
 }
 
-.greenVal{
+.greenVal {
     color: lawngreen;
+}
+
+.bar {
+    fill: blue;
+}
+
+.bar:hover {
+    fill: red;
+}
+
+.axis--x path {
+    display: none;
+}
+
+.links line {
+    stroke: #999;
+    stroke-opacity: 0.6;
+}
+
+.nodes circle {
+    stroke: #fff;
+    stroke-width: 1.5px;
 }
