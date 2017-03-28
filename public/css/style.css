@@ -1,8 +1,18 @@
 div.jumbotron {
     text-align: center;
+<<<<<<< HEAD
+    background-image: url("../images/white-house-logo.jpg");
+}
+
+
+/*need to style the logo of the white house to fit into jumbotron*/
+/*take the images of trump and make them circles to put into the corners of the jumbotron*/
+/*add a div for the video */
+=======
 }
 
 .liquidFillGaugeText {
     font-family: Helvetica;
     font-weight: bold;
 }
+>>>>>>> 693388534e87378dfcedfc9abfdbd66f538c4e8a

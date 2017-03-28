@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 /*background-image for jumbotron*/
 div.jumbotron.neutral{
     background-image: url("../images/whlogo.png");
@@ -15,6 +16,7 @@ h1 {
     -webkit-animation-delay: 4s;
     -webkit-animation-iteration-count: 3;
 }
+
 span {
     transform: translateX(200px);
     -webkit-animation-name: hinge;
