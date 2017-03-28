@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-# Created by https://www.gitignore.io/api/visualstudiocode,windows
-=======
 # Created by https://www.gitignore.io/api/node,windows,visualstudiocode
 
 ### Node ###
@@ -64,7 +61,6 @@ typings/
 # dotenv environment variables file
 .env
 
->>>>>>> 693388534e87378dfcedfc9abfdbd66f538c4e8a
 
 ### VisualStudioCode ###
 .vscode/*
@@ -94,10 +90,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-<<<<<<< HEAD
-# End of https://www.gitignore.io/api/visualstudiocode,windows
 
-=======
 # End of https://www.gitignore.io/api/node,windows,visualstudiocode
 public/.DS_Store
->>>>>>> 693388534e87378dfcedfc9abfdbd66f538c4e8a

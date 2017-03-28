@@ -12,16 +12,10 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-handlebars": "^2.0.1",
-<<<<<<< HEAD
-    "handlebars-helper-css": "^0.1.0",
-    "method-override": "^2.3.7",
-    "mysql": "^2.13.0"
-=======
     "graceful-fs": "^4.1.11",
     "method-override": "^2.3.5",
     "mysql": "^2.13.0",
     "sequelize": "^3.30.2"
->>>>>>> 693388534e87378dfcedfc9abfdbd66f538c4e8a
   },
   "devDependencies": {
     "handlebars-helper-css": "^0.1.0"
