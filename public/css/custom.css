@@ -288,7 +288,7 @@ header {
 
 .panel-body,
 .quote-label {
-    text-align: center;
+    /*text-align: center;*/
     background-color: #D8D5C9 !important;
     color: #000000;
 }
