@@ -237,7 +237,7 @@ header {
 }
 
 #middle {
-	width: 378px; /* Account for margins + border values - was seet to 294*/
+	width: 375px; /* Account for margins + border values - was seet to 294*/
 	float: left;
 	padding: 5px 15px;
 	margin: 0px 5px 5px 5px;
