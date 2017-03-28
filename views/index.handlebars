@@ -1,140 +1,22 @@
 <h1>This is the Quotes Part!</h1>
-<!-- Pass in data from html-routes.js -->
-{{!--
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="byRating">Filter By Rating:
-        <span class="caret">
-            <ul class="dropdown-menu">
-                <li><a href="quotes/rating/PG">Rating PG</a></li>
-                <li><a href="quotes/rating/R">Rating R</a></li>
-                <li><a href="quotes/rating/G">Rating G</a></li>
-            </ul>
-        </span>
-    </button>
-</div>--}}
+
 <div class="dropdown">
     <button class="btn btn-default dropdown-toggle" type="button" id="byRating" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Filter By Rating:
     <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="./quotes/rating/G">Rating G</a></li>
         <li><a href="./quotes/rating/PG">Rating PG</a></li>
         <li><a href="./quotes/rating/R">Rating R</a></li>
-        <li><a href="./quotes/rating/G">Rating G</a></li>
     </ul>
     <div class="dropdown">
         <button class="btn btn-default dropdown-toggle" type="button" id="byId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Filter By ID:
             <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <li><a href="./quotes/id/1">1</li>
-            <li><a href="./quotes/id/2">2</a></li>
-            <li><a href="./quotes/id/3">3</a></li>
-            <li><a href="./quotes/id/4">4</a></li>
-            <li><a href="./quotes/id/5">5</a></li>
-            <li><a href="./quotes/id/6">6</a></li>
-            <li><a href="./quotes/id/7">7</a></li>
-            <li><a href="./quotes/id/8">8</a></li>
-            <li><a href="./quotes/id/9">9</a></li>
-            <li><a href="./quotes/id/10">10</a></li>
-            <li><a href="./quotes/id/11">11</a></li>
-            <li><a href="./quotes/id/12">12</a></li>
-            <li><a href="./quotes/id/13">13</a></li>
-            <li><a href="./quotes/id/14">14</a></li>
-            <li><a href="./quotes/id/15">15</a></li>
-            <li><a href="./quotes/id/16">16</a></li>
-            <li><a href="./quotes/id/17">17</a></li>
-            <li><a href="./quotes/id/18">18</a></li>
-            <li><a href="./quotes/id/19">19</a></li>
-            <li><a href="./quotes/id/20">20</a></li>
-            <li><a href="./quotes/id/21">21</a></li>
-            <li><a href="./quotes/id/22">22</a></li>
-            <li><a href="./quotes/id/23">23</a></li>
-            <li><a href="./quotes/id/24">24</a></li>
-            <li><a href="./quotes/id/25">25</a></li>
-            <li><a href="./quotes/id/26">26</a></li>
-            <li><a href="./quotes/id/27">27</a></li>
-            <li><a href="./quotes/id/28">28</a></li>
-            <li><a href="./quotes/id/29">29</a></li>
-            <li><a href="./quotes/id/30">30</a></li>
-            <li><a href="./quotes/id/31">31</a></li>
-            <li><a href="./quotes/id/32">32</a></li>
-            <li><a href="./quotes/id/33">33</a></li>
-            <li><a href="./quotes/id/34">34</a></li>
-            <li><a href="./quotes/id/35">35</a></li>
-            <li><a href="./quotes/id/36">36</a></li>
-            <li><a href="./quotes/id/37">37</a></li>
-            <li><a href="./quotes/id/38">38</a></li>
-            <li><a href="./quotes/id/39">39</a></li>
-            <li><a href="./quotes/id/40">40</a></li>
-            <li><a href="./quotes/id/41">41</a></li>
-            <li><a href="./quotes/id/42">42</a></li>
-            <li><a href="./quotes/id/43">43</a></li>
-            <li><a href="./quotes/id/44">44</a></li>
-            <li><a href="./quotes/id/45">45</a></li>
-            <li><a href="./quotes/id/46">46</a></li>
-            <li><a href="./quotes/id/47">47</a></li>
-            <li><a href="./quotes/id/48">48</a></li>
-            <li><a href="./quotes/id/49">49</a></li>
-            <li><a href="./quotes/id/50">50</a></li>
-            <li><a href="./quotes/id/51">51</a></li>
-            <li><a href="./quotes/id/52">52</a></li>
-            <li><a href="./quotes/id/53">53</a></li>
-            <li><a href="./quotes/id/54">54</a></li>
-            <li><a href="./quotes/id/55">55</a></li>
-            <li><a href="./quotes/id/56">56</a></li>
-            <li><a href="./quotes/id/57">57</a></li>
-            <li><a href="./quotes/id/58">58</a></li>
-            <li><a href="./quotes/id/59">59</a></li>
-            <li><a href="./quotes/id/60">60</a></li>
-            <li><a href="./quotes/id/61">61</a></li>
-            <li><a href="./quotes/id/62">62</a></li>
-            <li><a href="./quotes/id/63">63</a></li>
-            <li><a href="./quotes/id/64">64</a></li>
-            <li><a href="./quotes/id/65">65</a></li>
-            <li><a href="./quotes/id/66">66</a></li>
-            <li><a href="./quotes/id/67">67</a></li>
-            <li><a href="./quotes/id/68">68</a></li>
-            <li><a href="./quotes/id/69">69</a></li>
-            <li><a href="./quotes/id/70">70</a></li>
-            <li><a href="./quotes/id/71">71</a></li>
-            <li><a href="./quotes/id/72">72</a></li>
-            <li><a href="./quotes/id/73">73</a></li>
-            <li><a href="./quotes/id/74">74</a></li>
-            <li><a href="./quotes/id/75">75</a></li>
-            <li><a href="./quotes/id/76">76</a></li>
-            <li><a href="./quotes/id/77">77</a></li>
-            <li><a href="./quotes/id/78">78</a></li>
-            <li><a href="./quotes/id/79">79</a></li>
-            <li><a href="./quotes/id/80">80</a></li>
-            <li><a href="./quotes/id/81">81</a></li>
-            <li><a href="./quotes/id/82">82</a></li>
-            <li><a href="./quotes/id/83">83</a></li>
-            <li><a href="./quotes/id/84">84</a></li>
-            <li><a href="./quotes/id/85">85</a></li>
-            <li><a href="./quotes/id/86">86</a></li>
-            <li><a href="./quotes/id/87">87</a></li>
-            <li><a href="./quotes/id/88">88</a></li>
-            <li><a href="./quotes/id/89">89</a></li>
-            <li><a href="./quotes/id/90">90</a></li>
-            <li><a href="./quotes/id/91">91</a></li>
-            <li><a href="./quotes/id/92">92</a></li>
-            <li><a href="./quotes/id/93">93</a></li>
-            <li><a href="./quotes/id/94">94</a></li>
-            <li><a href="./quotes/id/95">95</a></li>
-            <li><a href="./quotes/id/96">96</a></li>
-            <li><a href="./quotes/id/97">97</a></li>
-            <li><a href="./quotes/id/98">98</a></li>
-            <li><a href="./quotes/id/99">99</a></li>
-            <li><a href="./quotes/id/100">100</a></li>
-            <li><a href="./quotes/id/101">101</a></li>
-            <li><a href="./quotes/id/102">102</a></li>
-            <li><a href="./quotes/id/103">103</a></li>
-            <li><a href="./quotes/id/104">104</a></li>
-            <li><a href="./quotes/id/105">105</a></li>
-            <li><a href="./quotes/id/106">106</a></li>
-            <li><a href="./quotes/id/107">107</a></li>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" id="quotes-by-id">
+            {{!--quotes by ID will be added here--}}
         </ul>
     </div>
 </div>
@@ -157,27 +39,16 @@
 
 </div>
 </div>
-{{/each}} {{!--
+{{/each}}
 
-<h2>Add a Quote</h2>
+<script type="text/javascript" language="JavaScript">
+    for (i = 1; i < 108; i++) {
+        var li = $("<li>");
+        var a = $("<a>");
+        a.attr("href", "./quotes/id/"+ i);
+        a.html(i);
+        $("#quotes-by-id").append(li);
+        li.append(a);
 
-<form class="create-form" action="/" method="POST">
-
-    <div class="form-group">
-        <label for="quo">Quote:</label>
-        <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="source">Source:</label>
-        <input type="text" id="source" name="source">
-    </div>
-    <div class="form-group">
-        <label for="rating">Rating:</label>
-        <input type="text" id="rating" name="rating">
-    </div>
-    <div class="form-group">
-        <label for="year">Year:</label>
-        <input type="text" id="year" name="year">
-    </div>
-    <button type="submit">Add Quote</button>
-</form>--}}
+    }
+</script>
