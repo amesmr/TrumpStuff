@@ -1,3 +1,4 @@
+
 {/*<svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg>
     <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
     <svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>

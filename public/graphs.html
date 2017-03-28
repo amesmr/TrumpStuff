@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="/css/graphstyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container totustuus">
+        <h3 id="mainHeader"> Trump Data Analytics </h3>
+        <hr>
+        <div class="row firstRow">
+
+            <div style="padding-right: 0px" ; class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong><h6 class="panel-title titleAlign">Trump Twitter Follower Trends</h6></strong>
+                    </div>
+                    <div class="panel-body firstChartPanel" id="toolTipLanding">
+                        <svg class="areaChart" width="975" height="420"></svg>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-left : 0px" ; class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div class="panel panel-default rightCol">
+                    <div class="panel-body" id="trumpAssets">
+                        <h5 class="tHead tAssetHeadLeft">Asset</h5>
+                        <h5 class="tHead tAssetHeadCenter">Symbol</h5>
+                        <h5 class="tHead tAssetHeadRight">Value</h5>
+                        <div class="assetBin">
+                            <p class="tAsset">Trump Taj Mahal &nbsp; <span class="symbol"> (TTM) </span><span class="bankrupt"></span></p>
+                            <p class="tAsset">Trump's Ego &nbsp; &nbsp; &nbsp; &nbsp; <span class="symbol">  (EGO) </span>
+                                <span class="assetValue greenVal glyphicon glyphicon-arrow-up" id="ego"></span>
+                            </p>
+                            <p class="tAsset">Trump Plaza Hotel <span class="symbol"> (TPH) </span><span class="bankrupt"></span></p>
+                            <p class="tAsset">Trump Ice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="symbol"> &nbsp;  &nbsp; &nbsp;  &nbsp; (TI)   </span>
+                                <span class="assetValue redVal glyphicon glyphicon-arrow-down" id="ice"></span>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong><h6 class="panel-title titleAlign">Keyword Analysis</h6></strong>
+                    </div>
+                    <div class="panel-body secondChartPanel">
+                        <svg class="barChart" width="425" height="350"></svg>
+                    </div>
+                </div>
+            </div>
+             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong><h6 class="panel-title titleAlign">Force graph</h6></strong>
+                    </div>
+                    <div class="panel-body secondChartPanel">
+                        <svg id="force" width="700" height="350"></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://d3js.org/d3.v4.min.js">
+    </script>
+    <script src="/js/grapharea.js"></script>
+    <script src="/js/graphbar.js">
+    </script>
+      <script src="/js/force.js">
+    </script>
+    <script>
+        var egoValue = 127.87;
+        var iceValue = 4.36;
+        flashBankrupt();
+
+        function flashBankrupt() {
+            setTimeout(insertBankrupt, 700);
+
+            function insertBankrupt() {
+                $(".bankrupt").html("BANKRUPT");
+                setTimeout(deleteBankrupt, 700);
+            }
+
+            function deleteBankrupt() {
+                $(".bankrupt").html("");
+                flashBankrupt();
+            }
+        }
+        egoGrowth();
+
+        function egoGrowth() {
+            $("#ego").html(" " + egoValue);
+        }
+
+        iceDecline();
+
+        function iceDecline() {
+            $("#ice").html(" $" + iceValue);
+        }
+
+        $(document).ready(function () {
+            var transitionCounter = 0;
+            // numberTransition("ego", "green");
+            setTimeout(function () {
+                numberTransition("ego", "lawngreen")
+            }, 10000);
+
+            function numberTransition(selector, outputcolor) {
+
+                $("#" + selector).html(" " + egoValue)
+                    .css("color", "yellow");
+                setTimeout(flash, 100);
+
+                function flash() {
+                    $("#" + selector).html(" ------ ")
+                        .css("color", "yellow");
+                    if (transitionCounter < 5) {
+                        transitionCounter++;
+                        console.log("got in");
+
+                        numberTransition(selector, outputcolor);
+                    } else {
+                        egoValue = egoValue + 5;
+                        $("#" + selector).html(" " + egoValue)
+                            .css("color", outputcolor);
+                        transitionCounter = 0;
+                        return;
+                    }
+
+                }
+
+            }
+        });
+    </script>
+</body>
+
+</html>
