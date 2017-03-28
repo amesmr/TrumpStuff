@@ -1,10 +1,10 @@
  var parsedData = {
      nodes: [{
 
-             name: "root",
+             name: "ROOT",
              color: "white",
              size: 20,
-             group: 1
+             layer: 0
 
          },
 
@@ -13,40 +13,46 @@
              name: "himself",
              color: "red",
              size: 10,
-             group: 2
+             layer: 1
 
 
          },
          {
              name: "defenses",
              color: "green",
-             size: 10
+             size: 10,
+             layer: 1
 
          },
          {
              name: "celebrity",
              color: "yellow",
-             size: 10
+             size: 10,
+             layer: 1
 
          }, {
              name: "debates",
              color: "brown",
-             size: 10
+             size: 10,
+             layer: 1
 
          }, {
              name: "clintons",
              color: "grey",
-             size: 10
+             size: 10,
+             layer: 1
 
          }, {
              name: "nicknames",
              color: "lawngreen",
-             size: 10
+             size: 10,
+             layer: 1
 
          }, {
              name: "one liners",
              color: "blue",
-             size: 10
+             size: 10,
+             layer: 1
 
          },
 
@@ -58,21 +64,25 @@
              name: "Little Marco",
              color: "violet",
              size: 5,
+             layer: 2
 
          }, {
              name: "Lyin Ted",
              color: "violet",
              size: 5,
+             layer: 2
 
          }, {
              name: "Crooked Hillary",
              color: "violet",
              size: 5,
+             layer: 2
 
          }, {
              name: "Low energy Jeb",
              color: "violet",
              size: 5,
+             layer: 2
 
          }
      ],
@@ -133,11 +143,6 @@
              target: 11,
              value: 4,
              distance: 50
-         },{
-             source: 5,
-             target: 10,
-             value: 4,
-             distance: 50
          }
      ]
  };
@@ -152,7 +157,7 @@
      .force("link", d3.forceLink().distance(function (d) {
          return d.distance;
      }).strength(2))
-    //  .force("center", d3.forceCenter(width / 2, height / 2))
+     //  .force("center", d3.forceCenter(width / 2, height / 2))
      .force("charge", d3.forceManyBody());
 
 
@@ -181,7 +186,11 @@
 
  node.append("circle")
      .attr("r", function (d) {
-         return 8;
+         if (d.size > 19) {
+             return 8;
+         } else {
+             return 3;
+         }
      })
      .style("fill", function (d) {
          return d.color;
@@ -196,9 +205,22 @@
      .attr("dx", 12)
      .attr("dy", ".35em")
      .text(function (d) {
-         return d.name
+         var str = d.name;
+         return str.toUpperCase();
      })
-     .style("font-size", "10px")
+     .style("font-size", function (d) {
+         switch (d.layer) {
+             case 0:
+                 return "16px";
+                 break;
+             case 1:
+                 return "11px";
+                 break;
+             case 2:
+                 return "9px";
+                 break;
+         }
+     })
      .style("fill", "white");
 
  simulation.on("tick", function () {
