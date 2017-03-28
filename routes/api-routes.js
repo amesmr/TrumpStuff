@@ -33,7 +33,7 @@ module.exports = function (app) {
 
         db.quotes.findAll({
             where: {
-                category: req.params.rating
+                rating: req.params.rating
             }
         })
             .then(function (result) {
