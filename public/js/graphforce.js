@@ -147,7 +147,7 @@
      .force("link", d3.forceLink().distance(function (d) {
          return d.distance;
      }).strength(2))
-     .force("center", d3.forceCenter(width / 2, height / 2))
+    //  .force("center", d3.forceCenter(width / 2, height / 2))
      .force("charge", d3.forceManyBody());
 
 
