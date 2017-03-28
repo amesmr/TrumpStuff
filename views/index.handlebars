@@ -16,7 +16,7 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" id="quotes-by-id">
-            {{!--quotes by ID will be added here--}}
+            {{!-- quotes by ID will be added here by script below --}}
         </ul>
     </div>
 </div>
@@ -25,17 +25,17 @@
     {{!--
     <p>
         <span class="label">ID:</span> {{this.id}}</p>--}}
-    <div class="panel-title quote">Quote: {{this.quote}}</p>
-        <div>
-            <p>
-                <span class="quote-label">Rating:</span> {{this.rating}}</p>
-            <p>
-                <span class="quote-label">Source:</span> {{this.source}}</p>
-            <p>
-                <span class="quote-label">Year:</span> {{this.year}}</p>
+    <div class="panel-heading">
+        <div class="panel-title quote">Quote: {{this.quote}}</p>
+            <div class="panel-body quote-label">
+                Rating:{{this.rating}}<br>
+                Source:{{this.source}}<br>
+                Year:{{this.year}}
+            </div>
         </div>
     </div>
-    <hr>
+</div>
+<hr>
 
 </div>
 </div>
@@ -45,7 +45,7 @@
     for (i = 1; i < 108; i++) {
         var li = $("<li>");
         var a = $("<a>");
-        a.attr("href", "./quotes/id/"+ i);
+        a.attr("href", "./quotes/id/" + i);
         a.html(i);
         $("#quotes-by-id").append(li);
         li.append(a);
