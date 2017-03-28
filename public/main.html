@@ -83,15 +83,19 @@
                             <form role="form">
                                 <div class="form-group">
                                     <label for="Name">Name</label>
-                                    <input type="text" class="form-control" id="sign-up name">
+                                    <input type="text" class="form-control" id="newUserName">
                                 </div>
                                 <div class="form-group">
                                     <label for="DOB">Date of birth</label>
-                                    <input type="date" class="form-control" id="DOB">
+                                    <input type="date" class="form-control" id="newUserAge">
                                 </div>
                                 <div class="form-group">
                                     <label for="Email">Email address</label>
-                                    <input type="text" class="form-control" id="sign-up email">
+                                    <input type="text" class="form-control" id="newUserEmail">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password">Password</label>
+                                    <input type="text" class="form-control" id="newUserPassword">
                                 </div>
                                 <button type="submit" class="btn btn-primary submit">Submit</button>
 
@@ -123,11 +127,11 @@
                             <form role="form">
                                 <div class="form-group">
                                     <label for="Email">Email address</label>
-                                    <input type="text" class="form-control" id="sign-up email">
+                                    <input type="text" class="form-control" id="userEmail">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="text" class="form-control" id="password">
+                                    <input type="text" class="form-control" id="userPassword">
                                 </div>
                                 <button type="submit" class="btn btn-primary submit">Submit</button>
 
@@ -156,9 +160,10 @@
             </div>
         </footer>
     </div>
-    <script src="https://d3js.org/d3.v4.min.js">
-    </script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
+       <script src="js/authentication.js" language="JavaScript"></script>
     <script src="js/fluid.js" language="JavaScript"></script>
 
 
