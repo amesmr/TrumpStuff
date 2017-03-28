@@ -197,8 +197,9 @@ div.tooltip {
     display: none;
 }
 
-.links line {
-    stroke: #999;
+line.link{
+    stroke: white;
+    stroke-width: 2;
     stroke-opacity: 0.6;
 }
 
