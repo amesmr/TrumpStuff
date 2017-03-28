@@ -133,6 +133,11 @@
              target: 11,
              value: 4,
              distance: 50
+         },{
+             source: 5,
+             target: 10,
+             value: 4,
+             distance: 50
          }
      ]
  };
