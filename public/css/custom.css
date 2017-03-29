@@ -20,10 +20,10 @@ h1 {
     -webkit-animation-iteration-count: 3;
 }
 
-span {
+/*span {
     transform: translateX(200px);
     -webkit-animation-name: hinge;
-}
+}*/
 
 @-webkit-keyframes animatetop {
     from {

@@ -1,23 +1,18 @@
 <h1>This is the Quotes Part!</h1>
-
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="byRating" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Filter By Rating:
-    <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="./quotes/rating/G">Rating G</a></li>
-        <li><a href="./quotes/rating/PG">Rating PG</a></li>
-        <li><a href="./quotes/rating/R">Rating R</a></li>
-    </ul>
-    <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="byId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Filter By ID:
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" id="quotes-by-id">
+<div class="btn-group" role="group">
+    <div class="btn-group" role="group">
+        <button id="byRating" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Filter By Rating<span class="caret"></span></button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="./quotes/rating/G">Rating G</a><br>
+            <a class="dropdown-item" href="./quotes/rating/PG">Rating PG</a><br>
+            <a class="dropdown-item" href="./quotes/rating/R">Rating R</a><br>
+        </div>
+    </div>
+    <div class="btn-group" role="group">
+        <button id="byId" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Filter By ID<span class="caret"></span></button>
+        <div class="dropdown-menu" id="quotes-by-id">
             {{!-- quotes by ID will be added here by script below --}}
-        </ul>
+        </div>
     </div>
 </div>
 {{#each quotes}}
@@ -28,9 +23,8 @@
     <div class="panel-heading">
         <div class="panel-title quote">Quote: {{this.quote}}</p>
             <div class="panel-body quote-label">
-                Rating:{{this.rating}}<br>
-                Source:{{this.source}}<br>
-                Year:{{this.year}}
+                Rating:{{this.rating}}<br> Source:{{this.source}}
+                <br> Year:{{this.year}}
             </div>
         </div>
     </div>
@@ -43,12 +37,13 @@
 
 <script type="text/javascript" language="JavaScript">
     for (i = 1; i < 108; i++) {
-        var li = $("<li>");
+        {{!--<a class="dropdown-item" href= "./quotes/rating/G" > Rating G< /a>--}}
         var a = $("<a>");
+        var br = $("<br>");
+        a.addClass("dropdown-item");
         a.attr("href", "./quotes/id/" + i);
         a.html(i);
-        $("#quotes-by-id").append(li);
-        li.append(a);
-
+        $("#quotes-by-id").append(a);
+        a.append(br);
     }
 </script>
