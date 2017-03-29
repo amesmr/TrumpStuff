@@ -58,9 +58,9 @@ module.exports = function (app) {
             });
     });
 
-   app.use(function (req, res, next) {
-        res.status(404).sendFile(path.join(__dirname, "../public/error.html"));
-    });
+//    app.use(function (req, res, next) {
+//         res.status(404).sendFile(path.join(__dirname, "../public/error.html"));
+//     });
 //     app.get(function (req, res, next) {
 //   res.status(404).send()
 // })

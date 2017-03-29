@@ -131,6 +131,8 @@ div.tooltip {
 .tHead {
     float: left;
     background-color: yellow;
+    border-bottom: solid 3px #003366;
+    border-left: solid 1px #003366;
     color: black;
     font-weight: bolder;
     margin-top: 0px;
