@@ -58,6 +58,17 @@ module.exports = function (app) {
             });
     });
 
+
+    app.get("*/rating/css/*", function (req, res) {
+        console.log("in css route");
+        res.sendFile(path.join(__dirname, "../public/css/" + req.params[1]));
+    });
+
+    app.get("*/id/css/*", function (req, res) {
+        console.log("in css route");
+        res.sendFile(path.join(__dirname, "../public/css/" + req.params[1]));
+    });
+
    app.use(function (req, res, next) {
         res.status(404).sendFile(path.join(__dirname, "../public/error.html"));
     });
