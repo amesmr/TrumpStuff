@@ -199,8 +199,8 @@
          }
      ]
  };
- var width = 960,
-     height = 500
+ var width = 1200;
+ var height = 700;
 
  var svg = d3.select("#force")
      .attr("width", width)

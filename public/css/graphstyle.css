@@ -21,6 +21,7 @@ hr {
     border: solid 3px  #003366;
     background-color: transparent;
     border-radius: 0px;
+    margin-bottom: 0px;
 }
 
 .panel-default>.panel-heading {
@@ -36,13 +37,13 @@ hr {
 }
 
 .mainCol {
-    height: 800px;
+    height: 775px;
     background-color: black;
     background-color: transparent;
 }
 
 .rightCol {
-    height: 473px;
+    height: 475px;
     background-color: black;
     background-color: transparent;
 }
@@ -62,15 +63,13 @@ svg {
 
 .firstChartPanel {
     padding: 10px 10px 5px 10px;
+   
 }
 
 .barChart {
     padding-left: 10px;
 }
 
-.secondChartPanel {
-    padding: 10px 10px 5px 25px;
-}
 
 .xaxisWhite text {
     fill: white;
