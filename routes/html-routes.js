@@ -18,7 +18,7 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/main.html"));
     });
 
-    app.get("/graph/area", function (req, res) {
+    app.get("/graphs", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/graphs.html"));
     });
 
@@ -58,10 +58,10 @@ module.exports = function (app) {
             });
     });
 
-//    app.use(function (req, res, next) {
-//         res.status(404).sendFile(path.join(__dirname, "../public/error.html"));
-//     });
-//     app.get(function (req, res, next) {
-//   res.status(404).send()
-// })
+    //    app.use(function (req, res, next) {
+    //         res.status(404).sendFile(path.join(__dirname, "../public/error.html"));
+    //     });
+    app.use(function (req, res, next) {
+        res.status(404).send("<div style='text-align: center;'><h1> 404 Error</h1><h3> The page you requested can't be found </h3><img src='http://www.fairfaxunderground.com/forum/file.php?40,file=223627,filename=get_out_trump.jpg' alt='trumpImage'></div>");
+    })
 };

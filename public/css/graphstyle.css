@@ -18,7 +18,7 @@ hr {
 }
 
 .panel-default {
-    border: solid 3px  #003366;
+    border: solid 3px #003366;
     background-color: transparent;
     border-radius: 0px;
     margin-bottom: 0px;
@@ -26,7 +26,6 @@ hr {
 
 .panel-default>.panel-heading {
     background-color: yellow;
-   
     padding: 5px;
     border-bottom: solid 3px #003366;
     border-radius: 0px;
@@ -63,13 +62,11 @@ svg {
 
 .firstChartPanel {
     padding: 10px 10px 5px 10px;
-   
 }
 
 .barChart {
     padding-left: 10px;
 }
-
 
 .xaxisWhite text {
     fill: white;
@@ -208,4 +205,8 @@ line.link {
 .nodes circle {
     stroke: #fff;
     stroke-width: 1.5px;
+}
+
+.forceCircle {
+    cursor: pointer;
 }

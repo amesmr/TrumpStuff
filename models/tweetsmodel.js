@@ -1,6 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
   var Tweets = sequelize.define("tweets", {
-
     tweet_number: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -21,16 +20,26 @@ module.exports = function (sequelize, DataTypes) {
     tweet_id: {
       type: DataTypes.BIGINT
     },
-    // freezeTableName: true // Model tableName will be the same as the model name
+    name: {
+      type: DataTypes.STRING(1000)
+    },
 
+    layer: {
+      type: DataTypes.INTEGER
+    },
+    linkType: {
+      type: DataTypes.STRING(1000)
+
+    },
+    index: {
+      type: DataTypes.INTEGER,
+      defaultValue: 999
+    }
   }, {
     timestamps: false,
     freezeTableName: true,
-    tableName: 'sequelize_tweets'
-    
+    tableName: 'all_tweets'
+
   });
   return Tweets;
 };
-
-
-

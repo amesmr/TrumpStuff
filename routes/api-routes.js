@@ -18,6 +18,12 @@ module.exports = function (app) {
                 return res.json(result);
             });
     });
+       app.get("/api/jforce", function (req, res) {
+        db.jforce.findAll({})
+            .then(function (result) {
+                return res.json(result);
+            });
+    });
     app.get("/api/quotes", function (req, res) {
         // Add sequelize code to find all posts, and return them to the user with res.json
 
