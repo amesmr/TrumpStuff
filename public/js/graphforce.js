@@ -4,7 +4,8 @@
              name: "ROOT",
              color: "white",
              size: 20,
-             layer: 0
+             layer: 0,
+             index: 0
 
          },
 
@@ -13,7 +14,8 @@
              name: "himself",
              color: "red",
              size: 10,
-             layer: 1
+             layer: 1,
+             index: 1
 
 
          },
@@ -21,42 +23,46 @@
              name: "defenses",
              color: "green",
              size: 10,
-             layer: 1
+             layer: 1,
+             index: 2
 
          },
          {
              name: "celebrity",
              color: "yellow",
              size: 10,
-             layer: 1
+             layer: 1,
+             index: 3
 
          }, {
              name: "debates",
              color: "brown",
              size: 10,
-             layer: 1
+             layer: 1,
+             index: 4
 
          }, {
              name: "clintons",
              color: "grey",
              size: 10,
-             layer: 1
+             layer: 1,
+             index: 5
 
          }, {
              name: "nicknames",
              color: "lawngreen",
              size: 10,
-             layer: 1
+             layer: 1,
+             index: 6
 
          }, {
              name: "one liners",
              color: "blue",
              size: 10,
-             layer: 1
+             layer: 1,
+             index: 7
 
          },
-
-
 
          // level 2 branches
 
@@ -64,85 +70,132 @@
              name: "Little Marco",
              color: "violet",
              size: 5,
-             layer: 2
+             layer: 2,
+             index: 8
 
          }, {
              name: "Lyin Ted",
              color: "violet",
              size: 5,
-             layer: 2
+             layer: 2,
+             index: 9
 
          }, {
              name: "Crooked Hillary",
              color: "violet",
              size: 5,
-             layer: 2
+             layer: 2,
+             index: 10
 
          }, {
              name: "Low energy Jeb",
              color: "violet",
              size: 5,
-             layer: 2
+             layer: 2,
+             index: 11
 
+         },
+         // third layer
+         {
+             name: "jeb off stage",
+             color: "green",
+             size: 5,
+             layer: 3,
+             index: 12
+
+         }, {
+             name: "tough guy",
+             color: "green",
+             size: 5,
+             layer: 3,
+             index: 13
+
+         }, {
+             name: "real tough guy",
+             color: "green",
+             size: 5,
+             layer: 3,
+             index: 14
          }
      ],
      links: [{
              source: 0,
              target: 1,
              value: 4,
-             distance: 75
+             distance: 100
          },
          {
              source: 0,
              target: 2,
              value: 4,
-             distance: 75
+             distance: 100
          },
          {
              source: 0,
              target: 3,
              value: 4,
-             distance: 75
+             distance: 100
          }, {
              source: 0,
              target: 4,
              value: 4,
-             distance: 75
+             distance: 100
          }, {
              source: 0,
              target: 5,
              value: 4,
-             distance: 75
+             distance: 100
          }, {
              source: 0,
              target: 6,
              value: 4,
-             distance: 75
+             distance: 100
          }, {
              source: 0,
              target: 7,
              value: 4,
-             distance: 75
+             distance: 100
          }, {
              source: 6,
              target: 8,
              value: 4,
-             distance: 50
+             distance: 75
          }, {
              source: 6,
              target: 9,
              value: 4,
-             distance: 50
+             distance: 75
          }, {
              source: 6,
              target: 10,
              value: 4,
-             distance: 50
+             distance: 75
          }, {
              source: 6,
              target: 11,
              value: 4,
-             distance: 50
+             distance: 75
+         }, {
+             source: 11,
+             target: 12,
+             value: 4,
+             distance: 75
+         }, {
+             source: 11,
+             target: 13,
+             value: 4,
+             distance: 75
+         }, {
+             source: 11,
+             target: 14,
+             value: 4,
+             distance: 75
+         },
+         {
+             source: 12,
+             target: 4,
+             value: 4,
+             distance: 75
          }
      ]
  };
@@ -219,6 +272,9 @@
              case 2:
                  return "9px";
                  break;
+             case 3:
+                 return "9px";
+                 break;
          }
      })
      .style("fill", "white");
@@ -265,9 +321,7 @@
          .attr("cy", function (d) {
              return d.y;
          });
-
  }
-
 
  function dragstarted(d) {
      if (!d3.event.active) simulation.alphaTarget(0.3).restart();
