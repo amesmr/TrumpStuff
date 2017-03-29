@@ -44,7 +44,7 @@ module.exports = function (app) {
             });
     });
 
-    app.get("/quotes/rating/:rating", function (req, res) {
+    app.get("*rating/:rating", function (req, res) {
         db.quotes.findAll({
                 where: {
                     rating: req.params.rating
@@ -57,7 +57,7 @@ module.exports = function (app) {
             });
     });
 
-    app.get("/quotes/id/:id", function (req, res) {
+    app.get("*/id/:id", function (req, res) {
         db.quotes.findAll({
                 where: {
                     id: req.params.id

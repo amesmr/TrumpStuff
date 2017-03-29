@@ -1,51 +1,54 @@
-<h1>Quotes App</h1>
+<h1>This is the Quotes Part!</h1>
 
-<p>Manage quotes with this app</p>
-
-<!-- Pass in data from server.js -->
-<ul>
-    {{#each quotes}}
-    <li>
-        {{!--<p>
-            <span class="label">ID:</span> {{this.id}}</p>--}}
-        <p>
-            <span class="label">Quote:</span> {{this.quote}}</p>
-        <p>
-            <span class="label">Rating:</span> {{this.rating}}</p>
-        <p>
-            <span class="label">Source:</span> {{this.source}}</p>
-        <p>
-            <span class="label">Year:</span> {{this.year}}</p>
-
-        <form action="/{{this.id}}?_method=DELETE" method="POST">
-            <input type="hidden" name="id" value="{{this.id}}">
-            <button type="submit">Delete</button>
-        </form>
-
-        <a href="/{{this.id}}">Update this quote</a>
-    </li>
-    {{/each}}
-</ul>
-
-{{!--<h2>Add a Quote</h2>
-
-<form class="create-form" action="/" method="POST">
-
-    <div class="form-group">
-        <label for="quo">Quote:</label>
-        <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="byRating" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Filter By Rating:
+    <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="./quotes/rating/G">Rating G</a></li>
+        <li><a href="./quotes/rating/PG">Rating PG</a></li>
+        <li><a href="./quotes/rating/R">Rating R</a></li>
+    </ul>
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="byId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Filter By ID:
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" id="quotes-by-id">
+            {{!-- quotes by ID will be added here by script below --}}
+        </ul>
     </div>
-    <div class="form-group">
-        <label for="source">Source:</label>
-        <input type="text" id="source" name="source">
+</div>
+{{#each quotes}}
+<div "panel panel-default">
+    {{!--
+    <p>
+        <span class="label">ID:</span> {{this.id}}</p>--}}
+    <div class="panel-heading">
+        <div class="panel-title quote">Quote: {{this.quote}}</p>
+            <div class="panel-body quote-label">
+                Rating:{{this.rating}}<br>
+                Source:{{this.source}}<br>
+                Year:{{this.year}}
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="rating">Rating:</label>
-        <input type="text" id="rating" name="rating">
-    </div>
-    <div class="form-group">
-        <label for="year">Year:</label>
-        <input type="text" id="year" name="year">
-    </div>
-    <button type="submit">Add Quote</button>
-</form>--}}
+</div>
+<hr>
+
+</div>
+</div>
+{{/each}}
+
+<script type="text/javascript" language="JavaScript">
+    for (i = 1; i < 108; i++) {
+        var li = $("<li>");
+        var a = $("<a>");
+        a.attr("href", "./quotes/id/" + i);
+        a.html(i);
+        $("#quotes-by-id").append(li);
+        li.append(a);
+
+    }
+</script>

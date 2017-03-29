@@ -217,6 +217,7 @@ button.btn.btn-primary.submit:active {
     background: -o-linear-gradient(top, #b5b5b5, #1827f5);
     background-image: -ms-linear-gradient(top, #b5b5b5 0%, #1827f5 100%);
     color: #fff;
+
 }
 
 button.btn.btn-primary.submit:focus {
@@ -230,6 +231,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #666;
 }
+
 
 .body {
     background-color: #003366;
@@ -284,6 +286,19 @@ header {
     float: left;
     text-align: center;
     background-color: #D8D5C9 !important;
+
+}
+
+.panel-body,
+.quote-label {
+    /*text-align: center;*/
+    background-color: #D8D5C9 !important;
+    color: #000000;
+}
+
+.quote {
+    font-weight: bold;
+
 }
 
 footer {
@@ -509,7 +524,7 @@ button.send:hover {
     opacity: 1;
 }
 .form-control {
-    /*Overrode bootstrap so not using 
+    /*Overrode bootstrap so not using
     display:block;
     padding: 6px 12px;
     min-width:240px;
