@@ -1,4 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/*this is the background image*/
+body.body {
+    background-image: url("../images/flag2.1.jpg");
+    background-size: cover;
+}
+
 
 /*background-image for jumbotron*/
 
@@ -20,10 +26,6 @@ h1 {
     -webkit-animation-iteration-count: 3;
 }
 
-/*span {
-    transform: translateX(200px);
-    -webkit-animation-name: hinge;
-}*/
 
 @-webkit-keyframes animatetop {
     from {
@@ -254,6 +256,7 @@ body {
     width: 960px;
     margin: 0px auto;
     background-color: #D8D5C9;
+    background: rgba(0,0,0,0.4);
 }
 
 header {
