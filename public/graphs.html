@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+    <title>Trump Data Analytics</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -79,17 +79,18 @@
         var egoValue = 127.87;
         var iceValue = 4.36;
         flashBankrupt();
-
+        $(".bankrupt").html("BANKRUPT");
         function flashBankrupt() {
-            setTimeout(insertBankrupt, 700);
+            setTimeout(redBankrupt, 700);
 
-            function insertBankrupt() {
-                $(".bankrupt").html("BANKRUPT");
-                setTimeout(deleteBankrupt, 700);
+            function redBankrupt() {
+                $(".bankrupt").css("color","red");
+                setTimeout(blackBankrupt, 700);
             }
 
-            function deleteBankrupt() {
-                $(".bankrupt").html("");
+            function blackBankrupt() {
+                // this will make it invisible against the black background
+                $(".bankrupt").css("color", "black");
                 flashBankrupt();
             }
         }
@@ -107,14 +108,18 @@
 
         $(document).ready(function () {
             var transitionCounter = 0;
-            // numberTransition("ego", "green");
+            // numberTransition("ego", "green"); setInterval(function () { numberTransition("ego", "lawngreen", 5) }, 10000);
             setInterval(function () {
-                numberTransition("ego", "lawngreen")
+                numberTransition("ego", "lawngreen", 3.2)
+            }, 10000);
+            setInterval(function () {
+                numberTransition("ice", "red", -.2)
             }, 10000);
 
-            function numberTransition(selector, outputcolor) {
-
-                $("#" + selector).html(" " + egoValue)
+            function numberTransition(selector, outputcolor, changeVal) {
+                // set up local variable to point to the correct global
+                var localVal = selector + "Value";
+                $("#" + selector).html(" " + eval(localVal))
                     .css("color", "yellow");
                 setTimeout(flash, 100);
 
@@ -125,10 +130,15 @@
                         transitionCounter++;
                         console.log("got in");
 
-                        numberTransition(selector, outputcolor);
+                        numberTransition(selector, outputcolor, changeVal);
                     } else {
-                        egoValue = egoValue + 5;
-                        $("#" + selector).html(" " + egoValue)
+                        // poop, it doesn't really point to the global.  we'll have to set it manually
+                        if (selector == "ego"){
+                            egoValue = eval(localVal) + changeVal;
+                        } else if (selector == "ice"){
+                            iceValue = eval(localVal) + changeVal;
+                        }
+                        $("#" + selector).html(" " + eval(localVal).toFixed(2))
                             .css("color", outputcolor);
                         transitionCounter = 0;
                         return;
