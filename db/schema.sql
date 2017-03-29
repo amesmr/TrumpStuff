@@ -3,7 +3,7 @@ CREATE DATABASE trump_really;
 USE trump_really;
 
 -- Create the table events.
-CREATE TABLE sequelize_tweets (
+CREATE TABLE all_tweets (
     tweet_number INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
     tweet VARCHAR(800) NOT NULL,
     tweet_date VARCHAR(50) NOT NULL,
