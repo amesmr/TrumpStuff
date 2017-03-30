@@ -107,8 +107,16 @@
                                     <input type="date" class="form-control" id="DOB">
                                 </div>
                                 <div class="form-group">
-                                    <label for="password" class="form-control-label">password</label>
-                                    <input type="text" class="form-control" id="password">
+                                    <label for="userName" class="form-control-label">Username</label>
+                                    <input type="text" class="form-control" id="userName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="form-control-label">Password<span id="pass"> (must be longer then 6 characters)</span></label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword" class="form-control-label"> Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword">
                                 </div>
                             </form>
                         </div>
@@ -140,13 +148,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="form-control-label">password</label>
-                                    <input type="text" class="form-control" id="password2">
+                                    <input type="password" class="form-control" id="password2">
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary" id="login">Login</button>
+                              <button type="button" class="btn btn-primary" id="logout">Logout</button>
                         </div>
                     </div>
                 </div>
