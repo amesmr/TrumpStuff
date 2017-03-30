@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 /*this is the background image*/
+
 body.body {
     background-image: url("../images/flag2.1.jpg");
     background-size: cover;
@@ -25,7 +27,6 @@ h1 {
     -webkit-animation-delay: 4s;
     -webkit-animation-iteration-count: 3;
 }
-
 
 @-webkit-keyframes animatetop {
     from {
@@ -101,9 +102,11 @@ button.btn.btn-primary.btn-sm:active {
     background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
     color: #fff;
 }
-.modal-body{
+
+.modal-body {
     padding: 7px;
 }
+
 button.btn.btn-primary.btn-sm:focus {
     outline: 0;
 }
@@ -112,12 +115,17 @@ button.btn.btn-primary.btn-sm:focus {
     background-color: #94a0ed
 }
 
+#pass {
+    font-size : 12px; 
+}
+
 
 /* Show the dropdown menu on hover */
 
 .dropdown:hover .dropdown-item {
     display: block;
 }
+
 
 /*modal decoration*/
 
@@ -158,12 +166,15 @@ div.form-group {
     margin-bottom: 20px;
     /*width: 280px;*/
 }
+
 div.modal-form-group {
     width: 320px;
 }
-div.modal-content{
-        background-color: transparent;
+
+div.modal-content {
+    background-color: transparent;
 }
+
 .form-field:focus {
     background: #fff;
     color: #000000;
@@ -236,7 +247,6 @@ button.btn.btn-primary.submit:active {
     background: -o-linear-gradient(top, #b5b5b5, #1827f5);
     background-image: -ms-linear-gradient(top, #b5b5b5 0%, #1827f5 100%);
     color: #fff;
-
 }
 
 button.btn.btn-primary.submit:focus {
@@ -250,7 +260,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #666;
 }
-
 
 .body {
     background-color: #003366;
@@ -273,7 +282,7 @@ body {
     width: 960px;
     margin: 0px auto;
     background-color: #D8D5C9;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 header {
@@ -298,7 +307,7 @@ header {
     padding: 5px 15px;
     margin: 0px 5px 5px 5px;
     text-align: center;
-    background-color:#D8D5C9;
+    background-color: #D8D5C9;
 }
 
 #sidebar {
@@ -307,7 +316,6 @@ header {
     float: left;
     text-align: center;
     background-color: #D8D5C9 !important;
-
 }
 
 .panel-body,
@@ -319,13 +327,12 @@ header {
 
 .quote {
     font-weight: bold;
-
 }
 
 footer {
     clear: both;
     padding: 0 15px;
-    background-color:#D8D5C9;
+    background-color: #D8D5C9;
 }
 
 
