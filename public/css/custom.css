@@ -102,11 +102,23 @@ button.btn.btn-primary.btn-sm:active {
     background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
     color: #fff;
 }
-
+.modal-body{
+    padding: 7px;
+}
 button.btn.btn-primary.btn-sm:focus {
     outline: 0;
 }
 
+.dropdown-item a:hover {
+    background-color: #94a0ed
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-item {
+    display: block;
+}
 
 /*modal decoration*/
 
@@ -145,9 +157,14 @@ div.form-group {
     box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(000, 000, 000, 0.7) 0 0px 0px;
     padding: 8px;
     margin-bottom: 20px;
-    width: 280px;
+    /*width: 280px;*/
 }
-
+div.modal-form-group {
+    width: 320px;
+}
+div.modal-content{
+        background-color: transparent;
+}
 .form-field:focus {
     background: #fff;
     color: #000000;

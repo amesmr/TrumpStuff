@@ -2,11 +2,11 @@
 <div class="btn-group  btn-group-lg" role="group">
     <div class="btn-group btn-group-lg" role="group">
         <button id="byRating" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Filter By Rating<span class="caret"></span></button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="./quotes/rating/G">Rating G</a><br>
-            <a class="dropdown-item" href="./quotes/rating/PG">Rating PG</a><br>
-            <a class="dropdown-item" href="./quotes/rating/R">Rating R</a><br>
-        </div>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./quotes/rating/G">Rating G</li>
+            <li><a class="dropdown-item" href="./quotes/rating/PG">Rating PG</li>
+            <li><a class="dropdown-item" href="./quotes/rating/R">Rating R</li>
+        </ul>
     </div>
     <div class="btn-group btn-group-lg" role="group">
         <button id="byId" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Filter By ID<span class="caret"></span></button>
@@ -38,12 +38,12 @@
 <script type="text/javascript" language="JavaScript">
     for (i = 1; i < 108; i++) {
         {{!--<a class="dropdown-item" href= "./quotes/rating/G" > Rating G< /a>--}}
+        var li = $("<li>")
         var a = $("<a>");
-        var br = $("<br>");
         a.addClass("dropdown-item");
         a.attr("href", "./quotes/id/" + i);
         a.html(i);
-        $("#quotes-by-id").append(a);
-        a.append(br);
+        $("#quotes-by-id").append(li);
+        li.append(a);
     }
 </script>

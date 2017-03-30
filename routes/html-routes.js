@@ -58,14 +58,12 @@ module.exports = function (app) {
             });
     });
 
-
+    // These two routes are for the quotes refrences.  The handlebars stuff really confuses the default routes.
     app.get("*/rating/css/*", function (req, res) {
-        console.log("in css route");
         res.sendFile(path.join(__dirname, "../public/css/" + req.params[1]));
     });
 
     app.get("*/id/css/*", function (req, res) {
-        console.log("in css route");
         res.sendFile(path.join(__dirname, "../public/css/" + req.params[1]));
     });
 
