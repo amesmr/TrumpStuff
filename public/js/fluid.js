@@ -1,11 +1,3 @@
-{
-    /*<svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg>
-        <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
-        <svg id="fillgauge3" width="19%" height="200" onclick="gauge3.update(NewValue());"></svg>
-        <svg id="fillgauge4" width="19%" height="200" onclick="gauge4.update(NewValue());"></svg>
-        <svg id="fillgauge5" width="19%" height="200" onclick="gauge5.update(NewValue());"></svg>
-        <svg id="fillgauge6" width="19%" height="200" onclick="gauge6.update(NewValue());"></svg>*/
-}
 
 var config1 = liquidFillGaugeDefaultSettings();
 config1.circleColor = "black";

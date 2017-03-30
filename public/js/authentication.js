@@ -1,5 +1,10 @@
+<< << << < HEAD
+    ===
+    === =
 
-// Initialize Firebase
+    // Initialize Firebase
+    >>>
+    >>> > 590 ff610aefa11189c46ef4a2a6178fbff4396d9
 var config = {
     apiKey: "AIzaSyApfWeyBvq2w2QGe97I-Ge5fp4cI9zGGSE",
     authDomain: "trumpstuff-50d77.firebaseapp.com",
@@ -7,6 +12,7 @@ var config = {
     storageBucket: "trumpstuff-50d77.appspot.com",
     messagingSenderId: "204584749741"
 };
+
 firebase.initializeApp(config);
 
 var database = firebase.database();
@@ -39,14 +45,14 @@ $("#signup").on("click", function createUser() {
         $("#password").val("");
         $("#DOB").val("");
         $("#Name").val("");
-     });
+    });
 
     // $.modal.close();
 });
 
 
 function signIn() {
-    firebase.auth().signInWithEmailAndPassword(userName, password).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(userName, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -59,13 +65,13 @@ function signIn() {
 
 
 }
-$("#logout").on("click", function() {
+$("#logout").on("click", function () {
 
     signOut();
 
 
 });
-$("#submituser").on("click", function() {
+$("#submituser").on("click", function () {
     userName = $("#username").val();
     password = $("#password").val();
 
@@ -83,9 +89,9 @@ function displayUser() {
 }
 
 function signOut() {
-    firebase.auth().signOut().then(function() {
+    firebase.auth().signOut().then(function () {
         console.log("you are signed out");
-    }, function(error) {
+    }, function (error) {
         console.log(error);
     });
 }
