@@ -12,7 +12,7 @@
 var database = firebase.database();
 
 
-createUser();
+//createUser();
 function createUser() {
     firebase.auth().createUserWithEmailAndPassword("matt@gmail.com", "hello").catch(function(error) {
         // Handle Errors here.
