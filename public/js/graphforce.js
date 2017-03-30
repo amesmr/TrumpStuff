@@ -22,7 +22,7 @@
 
 
        var forceDataArray = [];
-       getthedata();
+       //    getthedata();
        var nodesArray = [];
        var linksArray = [{
                source: 0,
@@ -56,184 +56,184 @@
 
 
 
-       function layout() {
+    //    function layout() {
+    //        var parsedData = {
+    //            nodes: nodesArray,
+    //            links: linksArray
+    //        };
            var parsedData = {
-               nodes: nodesArray,
-               links: linksArray
+               nodes: [{
+
+                       name: "ROOT",
+                       color: "white",
+                       size: 20,
+                       layer: 0,
+                       index: 0
+
+                   },
+
+                   // main branches
+                   {
+                       name: "himself",
+                       color: "red",
+                       size: 10,
+                       layer: 1,
+                       index: 1
+
+
+                   },
+                   {
+                       name: "defenses",
+                       color: "green",
+                       size: 10,
+                       layer: 1,
+                       index: 2
+
+                   },
+                   {
+                       name: "celebrity",
+                       color: "yellow",
+                       size: 10,
+                       layer: 1,
+                       index: 3
+
+                   }, {
+                       name: "debates",
+                       color: "brown",
+                       size: 10,
+                       layer: 1,
+                       index: 4
+
+                   }, {
+                       name: "clintons",
+                       color: "grey",
+                       size: 10,
+                       layer: 1,
+                       index: 5
+
+                   }, {
+                       name: "nicknames",
+                       color: "lawngreen",
+                       size: 10,
+                       layer: 1,
+                       index: 6
+
+                   },
+
+                   // level 2 branches
+
+                   {
+                       name: "Little Marco",
+                       color: "violet",
+                       size: 5,
+                       layer: 2,
+                       index: 7
+
+                   }, {
+                       name: "Lyin Ted",
+                       color: "violet",
+                       size: 5,
+                       layer: 2,
+                       index: 8
+
+                   }, {
+                       name: "Crooked Hillary",
+                       color: "violet",
+                       size: 5,
+                       layer: 2,
+                       index: 9
+
+                   }, {
+                       name: "Low energy Jeb",
+                       color: "violet",
+                       size: 5,
+                       layer: 2,
+                       index: 10
+
+                   },
+                   // third layer
+                   {
+                       name: "jeb off stage",
+                       color: "green",
+                       size: 5,
+                       layer: 3,
+                       index: 11
+
+                   }, {
+                       name: "tough guy",
+                       color: "green",
+                       size: 5,
+                       layer: 3,
+                       index: 12
+
+                   }, {
+                       name: "real tough guy",
+                       color: "green",
+                       size: 5,
+                       layer: 3,
+                       index: 13
+                   }
+               ],
+               links: [{
+                       source: 0,
+                       target: 1,
+                       sourceText: "root",
+                       targetText: "himself",
+                       linkType: "main",
+                       distance: 100
+                   },
+                   {
+                       source: 0,
+                       target: 2,
+                       distance: 100
+                   },
+                   {
+                       source: 0,
+                       target: 3,
+                       distance: 100
+                   }, {
+                       source: 0,
+                       target: 4,
+                       distance: 100
+                   }, {
+                       source: 0,
+                       target: 5,
+                       distance: 100
+                   }, {
+                       source: 0,
+                       target: 6,
+                       distance: 100
+                   }, {
+                       source: 0,
+                       target: 7,
+                       distance: 100
+                   }, {
+                       source: 6,
+                       target: 8,
+                       distance: 75
+                   }, {
+                       source: 6,
+                       target: 9,
+                       distance: 75
+                   }, {
+                       source: 6,
+                       target: 10,
+                       distance: 75
+                   }, {
+                       source: 6,
+                       target: 11,
+                       distance: 75
+                   }, {
+                       source: 11,
+                       target: 12,
+                       distance: 75
+                   }, {
+                       source: 11,
+                       target: 13,
+                       distance: 75
+                   }
+               ]
            };
-           //    var parsedData = {
-           //        nodes: [{
-
-           //                name: "ROOT",
-           //                color: "white",
-           //                size: 20,
-           //                layer: 0,
-           //                index: 0
-
-           //            },
-
-           //            // main branches
-           //            {
-           //                name: "himself",
-           //                color: "red",
-           //                size: 10,
-           //                layer: 1,
-           //                index: 1
-
-
-           //            },
-           //            {
-           //                name: "defenses",
-           //                color: "green",
-           //                size: 10,
-           //                layer: 1,
-           //                index: 2
-
-           //            },
-           //            {
-           //                name: "celebrity",
-           //                color: "yellow",
-           //                size: 10,
-           //                layer: 1,
-           //                index: 3
-
-           //            }, {
-           //                name: "debates",
-           //                color: "brown",
-           //                size: 10,
-           //                layer: 1,
-           //                index: 4
-
-           //            }, {
-           //                name: "clintons",
-           //                color: "grey",
-           //                size: 10,
-           //                layer: 1,
-           //                index: 5
-
-           //            }, {
-           //                name: "nicknames",
-           //                color: "lawngreen",
-           //                size: 10,
-           //                layer: 1,
-           //                index: 6
-
-           //            },
-
-           //            // level 2 branches
-
-           //            {
-           //                name: "Little Marco",
-           //                color: "violet",
-           //                size: 5,
-           //                layer: 2,
-           //                index: 7
-
-           //            }, {
-           //                name: "Lyin Ted",
-           //                color: "violet",
-           //                size: 5,
-           //                layer: 2,
-           //                index: 8
-
-           //            }, {
-           //                name: "Crooked Hillary",
-           //                color: "violet",
-           //                size: 5,
-           //                layer: 2,
-           //                index: 9
-
-           //            }, {
-           //                name: "Low energy Jeb",
-           //                color: "violet",
-           //                size: 5,
-           //                layer: 2,
-           //                index: 10
-
-           //            },
-           //            // third layer
-           //            {
-           //                name: "jeb off stage",
-           //                color: "green",
-           //                size: 5,
-           //                layer: 3,
-           //                index: 11
-
-           //            }, {
-           //                name: "tough guy",
-           //                color: "green",
-           //                size: 5,
-           //                layer: 3,
-           //                index: 12
-
-           //            }, {
-           //                name: "real tough guy",
-           //                color: "green",
-           //                size: 5,
-           //                layer: 3,
-           //                index: 13
-           //            }
-           //        ],
-           //        links: [{
-           //                source: 0,
-           //                target: 1,
-           //                sourceText: "root",
-           //                targetText: "himself",
-           //                linkType: "main",
-           //                distance: 100
-           //            }
-           //  {
-           //      source: 0,
-           //      target: 2,
-           //      distance: 100
-           //  },
-           //  {
-           //      source: 0,
-           //      target: 3,
-           //      distance: 100
-           //  }, {
-           //      source: 0,
-           //      target: 4,
-           //      distance: 100
-           //  }, {
-           //      source: 0,
-           //      target: 5,
-           //      distance: 100
-           //  }, {
-           //      source: 0,
-           //      target: 6,
-           //      distance: 100
-           //  }, {
-           //      source: 0,
-           //      target: 7,
-           //      distance: 100
-           //  }, {
-           //      source: 6,
-           //      target: 8,
-           //      distance: 75
-           //  }, {
-           //      source: 6,
-           //      target: 9,
-           //      distance: 75
-           //  }, {
-           //      source: 6,
-           //      target: 10,
-           //      distance: 75
-           //  }, {
-           //      source: 6,
-           //      target: 11,
-           //      distance: 75
-           //  }, {
-           //      source: 11,
-           //      target: 12,
-           //      distance: 75
-           //  }, {
-           //      source: 11,
-           //      target: 13,
-           //      distance: 75
-           //  }
-           //        ]
-           //    };
 
 
            var width = 1200;
@@ -386,4 +386,4 @@
                d.fx = null;
                d.fy = null;
            }
-       }
+       
