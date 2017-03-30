@@ -1,3 +1,10 @@
+<< << << < HEAD
+    ===
+    === =
+
+    // Initialize Firebase
+    >>>
+    >>> > 590 ff610aefa11189c46ef4a2a6178fbff4396d9
 var config = {
     apiKey: "AIzaSyApfWeyBvq2w2QGe97I-Ge5fp4cI9zGGSE",
     authDomain: "trumpstuff-50d77.firebaseapp.com",
@@ -6,20 +13,40 @@ var config = {
     messagingSenderId: "204584749741"
 };
 
-firebase.initializeApp(config)
+firebase.initializeApp(config);
+
 var database = firebase.database();
 
 
-console.log(createUser());
+$("#signup").on("click", function createUser() {
+    var email = $("#email-address").val();
+    var password = $("#password").val();
+    var dob = $("#DOB").val();
+    var name = $("#Name").val();
 
-function createUser() {
-    firebase.auth().createUserWithEmailAndPassword("matt@gmail.com", "hello").catch(function (error) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        console.log(error.code);
+        console.log(error.message);
+        alert(error.message);
         // ...
+    }).then(function (onResolve, onReject) {
+        console.log(onResolve);
+        console.log(onReject);
+        database.ref("/users/" + onResolve.uid).set({
+            name: name,
+            email: email,
+            DOB: dob,
+            password: password
+        });
+        $("#email-address").val("");
+        $("#password").val("");
+        $("#DOB").val("");
+        $("#Name").val("");
     });
-}
+
+    // $.modal.close();
+});
 
 
 function signIn() {
