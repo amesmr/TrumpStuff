@@ -44,8 +44,8 @@
                .done(function (data) {
                    var n = data.length;
                    for (var i = 0; i < n; i++) {
-                       if (data[i].index != 999) {
-                           var node = new NodeConstruct(data[i].tweet, "white", data[i].layer, data[i].linkType, data[i].index);
+                       if (data[i].position != 999) {
+                           var node = new NodeConstruct(data[i].tweet, "white", data[i].layer, data[i].linkType, data[i].position);
                            nodesArray.push(node);
                        }
                    }
@@ -386,4 +386,3 @@
                d.fx = null;
                d.fy = null;
            }
-       

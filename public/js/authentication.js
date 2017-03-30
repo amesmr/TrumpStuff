@@ -1,21 +1,21 @@
-  // james firebase
+//   // james firebase
+//   var config = {
+//       apiKey: "AIzaSyA5zhoPAcAHa_ihboPI-vaPgsN5WqrBAvA",
+//       authDomain: "trumpjjw.firebaseapp.com",
+//       databaseURL: "https://trumpjjw.firebaseio.com",
+//       storageBucket: "trumpjjw.appspot.com",
+//       messagingSenderId: "68421990596"
+//   };
+
+
+    // matt firebase
   var config = {
-      apiKey: "AIzaSyA5zhoPAcAHa_ihboPI-vaPgsN5WqrBAvA",
-      authDomain: "trumpjjw.firebaseapp.com",
-      databaseURL: "https://trumpjjw.firebaseio.com",
-      storageBucket: "trumpjjw.appspot.com",
-      messagingSenderId: "68421990596"
+      apiKey: "AIzaSyApfWeyBvq2w2QGe97I-Ge5fp4cI9zGGSE",
+      authDomain: "trumpstuff-50d77.firebaseapp.com",
+      databaseURL: "https://trumpstuff-50d77.firebaseio.com",
+      storageBucket: "trumpstuff-50d77.appspot.com",
+      messagingSenderId: "204584749741"
   };
-
-
-  //   matt firebase
-  // var config = {
-  //     apiKey: "AIzaSyApfWeyBvq2w2QGe97I-Ge5fp4cI9zGGSE",
-  //     authDomain: "trumpstuff-50d77.firebaseapp.com",
-  //     databaseURL: "https://trumpstuff-50d77.firebaseio.com",
-  //     storageBucket: "trumpstuff-50d77.appspot.com",
-  //     messagingSenderId: "204584749741"
-  // };
 
   firebase.initializeApp(config);
 
