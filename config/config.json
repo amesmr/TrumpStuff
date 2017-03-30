@@ -4,6 +4,7 @@
         "password": "root",
         "database": "trump_really",
         "port": "3306",
+        "port": 3306,
         "dialect": "mysql"
     },
     "test": {

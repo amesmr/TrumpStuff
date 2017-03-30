@@ -17,6 +17,7 @@ module.exports = function (app) {
             .then(function (result) {
                 return res.json(result);
             });
+
     });
        app.get("/api/jforce", function (req, res) {
         db.jforce.findAll({})
