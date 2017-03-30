@@ -257,6 +257,9 @@ body {
     margin: 0px auto;
     background-color: #D8D5C9;
     background: rgba(0,0,0,0.4);
+    border-style: inset;
+    border-width: 10px;
+    border-color: gold;
 }
 
 header {
@@ -435,11 +438,11 @@ footer {
     border-radius:3px;
     color:#003366;*/
 
-display: none;
+/*display: none;*/
 
 /* Hidden by default */
 
-position: fixed;
+/*position: fixed;*?
 
 /* Stay in place */
 
