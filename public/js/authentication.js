@@ -1,20 +1,19 @@
+var config = {
+    apiKey: "AIzaSyApfWeyBvq2w2QGe97I-Ge5fp4cI9zGGSE",
+    authDomain: "trumpstuff-50d77.firebaseapp.com",
+    databaseURL: "https://trumpstuff-50d77.firebaseio.com",
+    storageBucket: "trumpstuff-50d77.appspot.com",
+    messagingSenderId: "204584749741"
+};
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCAn7uijojtF8McvMwuRtjOwiopN3_enqk",
-    authDomain: "trainjjw.firebaseapp.com",
-    databaseURL: "https://trainjjw.firebaseio.com",
-    storageBucket: "trainjjw.appspot.com",
-    messagingSenderId: "765865960520"
-  };
-  firebase.initializeApp(config);
-
+firebase.initializeApp(config)
 var database = firebase.database();
 
 
-createUser();
+console.log(createUser());
+
 function createUser() {
-    firebase.auth().createUserWithEmailAndPassword("matt@gmail.com", "hello").catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword("matt@gmail.com", "hello").catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -24,7 +23,7 @@ function createUser() {
 
 
 function signIn() {
-    firebase.auth().signInWithEmailAndPassword(userName, password).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(userName, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -37,13 +36,13 @@ function signIn() {
 
 
 }
-$("#logout").on("click", function() {
+$("#logout").on("click", function () {
 
     signOut();
 
 
 });
-$("#submituser").on("click", function() {
+$("#submituser").on("click", function () {
     userName = $("#username").val();
     password = $("#password").val();
 
@@ -61,9 +60,9 @@ function displayUser() {
 }
 
 function signOut() {
-    firebase.auth().signOut().then(function() {
+    firebase.auth().signOut().then(function () {
         console.log("you are signed out");
-    }, function(error) {
+    }, function (error) {
         console.log(error);
     });
 }
