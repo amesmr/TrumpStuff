@@ -43,7 +43,7 @@ $("#signup").on("click", function createUser() {
 });
 
 
-$("#signup").on("click", function signIn() {
+$("#login").on("click", function login() {
     var email = $("#email-address2").val();
     var password = $("#password2").val();
     firebase.auth().signInWithEmailAndPassword(email, password)
@@ -56,7 +56,7 @@ $("#signup").on("click", function signIn() {
         }).then(function (onResolve, onReject) {
             console.log(onResolve);
             console.log(onReject);
-            var thisUser = database.ref("/users/" + onResolve.uid)
+            var thisUser = database.ref("/users/" + onResolve.uid);
 
             displayUser(thisUser.name);
             $("#email-address2").val("");
@@ -83,7 +83,7 @@ $("#submituser").on("click", function () {
 
 
 
-function displayUser() {
+function displayUser(userName) {
     $("#displayUser").html(userName + " is logged in");
 
 }
