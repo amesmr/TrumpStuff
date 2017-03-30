@@ -1,10 +1,4 @@
-<< << << < HEAD
-    ===
-    === =
 
-    // Initialize Firebase
-    >>>
-    >>> > 590 ff610aefa11189c46ef4a2a6178fbff4396d9
 var config = {
     apiKey: "AIzaSyApfWeyBvq2w2QGe97I-Ge5fp4cI9zGGSE",
     authDomain: "trumpstuff-50d77.firebaseapp.com",
