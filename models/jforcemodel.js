@@ -1,10 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
-    var Force = sequelize.define("jforce", {
+    var Force = sequelize.define("force_tweets", {
 
         tweet_number: {
             type: DataTypes.INTEGER,
             primaryKey: true
-       
+
         },
         tweet: {
             type: DataTypes.STRING(1000)
@@ -32,7 +32,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING(1000)
 
         },
-        index: {
+        position: {
             type: DataTypes.INTEGER,
             defaultValue: 999
         }

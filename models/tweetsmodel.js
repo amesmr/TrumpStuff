@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var Tweets = sequelize.define("tweets", {
+  var Tweets = sequelize.define("all_tweets", {
     tweet_number: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -31,7 +31,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING(1000)
 
     },
-    index: {
+    position: {
       type: DataTypes.INTEGER,
       defaultValue: 999
     }

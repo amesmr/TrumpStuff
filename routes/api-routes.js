@@ -13,14 +13,14 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/api/alltweets", function (req, res) {
-        db.tweets.findAll({})
+        db.all_tweets.findAll({})
             .then(function (result) {
                 return res.json(result);
             });
 
     });
-       app.get("/api/jforce", function (req, res) {
-        db.jforce.findAll({})
+    app.get("/api/jforce", function (req, res) {
+        db.force_tweets.findAll({})
             .then(function (result) {
                 return res.json(result);
             });
@@ -39,10 +39,10 @@ module.exports = function (app) {
         // return the result to the user with res.json
 
         db.quotes.findAll({
-            where: {
-                rating: req.params.rating
-            }
-        })
+                where: {
+                    rating: req.params.rating
+                }
+            })
             .then(function (result) {
                 return res.json(result);
             });
@@ -53,10 +53,10 @@ module.exports = function (app) {
         // Add sequelize code to find a single post where the id is equal to req.params.id,
         // return the result to the user with res.json
         db.quotes.findAll({
-            where: {
-                id: req.params.id
-            }
-        })
+                where: {
+                    id: req.params.id
+                }
+            })
             .then(function (result) {
                 return res.json(result);
             });
