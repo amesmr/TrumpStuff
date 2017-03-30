@@ -14,19 +14,20 @@ body {
 }
 
 hr {
-    border-color: yellow;
+    border-color: #003366;
 }
 
 .panel-default {
-    border: solid 2px yellow;
+    border: solid 3px #003366;
     background-color: transparent;
     border-radius: 0px;
+    margin-bottom: 0px;
 }
 
 .panel-default>.panel-heading {
     background-color: yellow;
-    border-color: yellow;
     padding: 5px;
+    border-bottom: solid 3px #003366;
     border-radius: 0px;
 }
 
@@ -35,13 +36,13 @@ hr {
 }
 
 .mainCol {
-    height: 800px;
+    height: 775px;
     background-color: black;
     background-color: transparent;
 }
 
 .rightCol {
-    height: 473px;
+    height: 475px;
     background-color: black;
     background-color: transparent;
 }
@@ -65,10 +66,6 @@ svg {
 
 .barChart {
     padding-left: 10px;
-}
-
-.secondChartPanel {
-    padding: 10px 10px 5px 25px;
 }
 
 .xaxisWhite text {
@@ -129,26 +126,28 @@ div.tooltip {
 
 .tHead {
     float: left;
-    background-color: darkgrey;
+    background-color: yellow;
+    border-bottom: solid 3px #003366;
+    border-left: solid 1px #003366;
     color: black;
-    border: solid 1px gray;
     font-weight: bolder;
     margin-top: 0px;
-    padding: 6px;
-    border-radius: 2px;
+    padding: 6px 6px 7px 6px;
     margin-bottom: 5px;
 }
 
 .tAssetHeadLeft {
-    width: 130px;
+    width: 40%;
 }
 
 .tAssetHeadCenter {
-    width: 83px;
+    width: 25%;
+    border-right: solid 2px grey;
+    border-left: solid 2px grey;
 }
 
 .tAssetHeadRight {
-    width: 95px;
+    width: 35%;
 }
 
 .assetBin {
@@ -197,13 +196,17 @@ div.tooltip {
     display: none;
 }
 
-line.link{
+line.link {
     stroke: white;
-    stroke-width: 2;
+    stroke-width: 1;
     stroke-opacity: 0.6;
 }
 
 .nodes circle {
     stroke: #fff;
     stroke-width: 1.5px;
+}
+
+.forceCircle {
+    cursor: pointer;
 }

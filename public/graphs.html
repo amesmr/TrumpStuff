@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+    <title>Trump Data Analytics</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -14,7 +14,7 @@
         <h3 id="mainHeader"> Trump Data Analytics </h3>
         <hr>
         <div class="row firstRow">
-            <div style="padding-right: 0px" ; class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <div style="padding-right: 0px"; class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <strong><h6 class="panel-title titleAlign">Trump Twitter Follower Trends</h6></strong>
@@ -39,14 +39,13 @@
                             <p class="tAsset">Trump Ice &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="symbol"> &nbsp;  &nbsp; &nbsp;  &nbsp; (TI)   </span>
                                 <span class="assetValue redVal glyphicon glyphicon-arrow-down" id="ice"></span>
                             </p>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div style="padding-right: 0px"; class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <strong><h6 class="panel-title titleAlign">Keyword Analysis</h6></strong>
@@ -56,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div style="padding-left: 0px"; class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <strong><h6 class="panel-title titleAlign">Force graph</h6></strong>
@@ -76,21 +75,22 @@
     </script>
     <script src="/js/graphforce.js">
     </script>
-    <script>
+    <script type="text/javascript" language="JavaScript">
         var egoValue = 127.87;
         var iceValue = 4.36;
         flashBankrupt();
-
+        $(".bankrupt").html("BANKRUPT");
         function flashBankrupt() {
-            setTimeout(insertBankrupt, 700);
+            setTimeout(redBankrupt, 700);
 
-            function insertBankrupt() {
-                $(".bankrupt").html("BANKRUPT");
-                setTimeout(deleteBankrupt, 700);
+            function redBankrupt() {
+                $(".bankrupt").css("color","red");
+                setTimeout(blackBankrupt, 700);
             }
 
-            function deleteBankrupt() {
-                $(".bankrupt").html("");
+            function blackBankrupt() {
+                // this will make it invisible against the black background
+                $(".bankrupt").css("color", "black");
                 flashBankrupt();
             }
         }
@@ -108,14 +108,18 @@
 
         $(document).ready(function () {
             var transitionCounter = 0;
-            // numberTransition("ego", "green");
-            setTimeout(function () {
-                numberTransition("ego", "lawngreen")
+            // numberTransition("ego", "green"); setInterval(function () { numberTransition("ego", "lawngreen", 5) }, 10000);
+            setInterval(function () {
+                numberTransition("ego", "lawngreen", 3.2)
+            }, 10000);
+            setInterval(function () {
+                numberTransition("ice", "red", -.2)
             }, 10000);
 
-            function numberTransition(selector, outputcolor) {
-
-                $("#" + selector).html(" " + egoValue)
+            function numberTransition(selector, outputcolor, changeVal) {
+                // set up local variable to point to the correct global
+                var localVal = selector + "Value";
+                $("#" + selector).html(" " + eval(localVal))
                     .css("color", "yellow");
                 setTimeout(flash, 100);
 
@@ -126,10 +130,15 @@
                         transitionCounter++;
                         console.log("got in");
 
-                        numberTransition(selector, outputcolor);
+                        numberTransition(selector, outputcolor, changeVal);
                     } else {
-                        egoValue = egoValue + 5;
-                        $("#" + selector).html(" " + egoValue)
+                        // poop, it doesn't really point to the global.  we'll have to set it manually
+                        if (selector == "ego"){
+                            egoValue = eval(localVal) + changeVal;
+                        } else if (selector == "ice"){
+                            iceValue = eval(localVal) + changeVal;
+                        }
+                        $("#" + selector).html(" " + eval(localVal).toFixed(2))
                             .css("color", outputcolor);
                         transitionCounter = 0;
                         return;
