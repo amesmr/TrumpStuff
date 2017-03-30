@@ -3,18 +3,50 @@
 /*this is the background image*/
 
 body.body {
-    background-image: url("../images/flag2.1.jpg");
+    background-image: url("../images/flag2.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
 /*background-image for jumbotron*/
 
-div.jumbotron.neutral {
-    background-image: url("../images/whlogo.png");
+div.jumbotron {
+    background-image: url();/*add picture of postage stamp and Trump here*/
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/*Updated stamp. If this works, get rid of the stamp below*/
+div.stamp {
+    width: 400px;
+    height: 400px;
+    padding: 8px;
+    background: #fff;
+    background: radial-gradient(transparent, transparent 7px, white 7px, white);
+    background-size: 20px 20px;
+    background-position: -9px -9px;
+    -webkit-filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
+    margin: auto;
+    
+}
+
+
+ div.stamp.p {
+    color: #fff;
+    margin: 10px 10px 0 0;
+    font: bold 60px Georgia, "Times New Roman", Times, serif;
+    text-align: right;
+}
+
+/*.stamp {
+    width: 500px;
+    height: 414px;
+    background: #fff url("../images/trump5.jpg") no-repeat;
+    border: 12px dashed #1b1a19;
+}*/
+
+
 
 
 /*Title*/
@@ -292,30 +324,43 @@ header {
     background-color: #767570;
 }
 
-#content {
+section#content {
     width: 270px;
     float: left;
     padding: 5px 15px;
     text-align: center;
-    background-color: #D8D5C9 !important;
+    /*background-color: #D8D5C9 !important;*/
+    background: rgba(0, 0, 0, 0.4);
+    font-family: 'Cinzel', serif;
+    color: white;
 }
 
-#middle {
+section#middle {
     width: 375px;
     /* Account for margins + border values - was seet to 294*/
     float: left;
     padding: 5px 15px;
     margin: 0px 5px 5px 5px;
     text-align: center;
-    background-color: #D8D5C9;
+
+    /*background-color:#D8D5C9;*/
+    background: rgba(0, 0, 0, 0.4);
+    font-family: 'Cinzel', serif;
+    color: white;
+
 }
 
-#sidebar {
+aside#sidebar {
     width: 270px;
     padding: 5px 15px;
     float: left;
     text-align: center;
-    background-color: #D8D5C9 !important;
+
+    /*background-color: #D8D5C9 !important;*/
+    background: rgba(0, 0, 0, 0.4);
+    font-family: 'Cinzel', serif;
+    color: white;
+
 }
 
 .panel-body,
@@ -461,11 +506,14 @@ footer {
     border-radius:3px;
     color:#003366;*/
 
-display: none;
+
+/*display: none;*/
+
 
 /* Hidden by default */
 
-position: fixed;
+
+/*position: fixed;*?
 
 /* Stay in place */
 
