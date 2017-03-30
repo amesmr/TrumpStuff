@@ -21,8 +21,8 @@
 
         <h1 class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 animated rubberBand">Trump Stuff!</h1><br>
         <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Sign-up</button>
-            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signupModal">Sign-up</button>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">Login</button>
         </div>
 
     </div>
@@ -49,7 +49,7 @@
         </section>
         <section id="middle">
             <h2>Do We Approve?</h2>
-           <!--*************ADJUSTED BACKGROUND COLOR OF FILL GAUGE - NEED TO FIND ORIGINAL CODE AND SWITCH OUT SO NOT INLINE*********-->
+            <!--*************ADJUSTED BACKGROUND COLOR OF FILL GAUGE - NEED TO FIND ORIGINAL CODE AND SWITCH OUT SO NOT INLINE*********-->
 
             <svg id="fillgauge2" width="40%" height="200" style="background-color:#fff;"></svg>
 
@@ -64,60 +64,80 @@
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </aside>
         <div>
-        <section id="bottom" style="width:960px; height:400px;">
-            <iframe width="100%" height="318" src="/quotes" frameborder="0"></iframe>
-        </section>
-</div>
+            <section id="bottom" style="width:960px; height:400px;">
+                <iframe width="100%" height="318" src="/quotes" frameborder="0"></iframe>
+            </section>
+        </div>
         <!--where old modal was-->
         <!-- Button trigger modal -->
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="form-group modal-form-group">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLongTitle"><strong>Sign Up</strong></h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="recipient-name" class="form-control-label">Name</label>
-                                <input type="text" class="form-control" id="Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="Name" class="form-control-label">Email Address</label>
-                                <input type="text" class="form-control" id="email-address">
-                            </div>
-                            <div class="form-group">
-                                <label for="DOB" class="form-control-label">Date of birth</label>
-                                <input type="date" class="form-control" id="DOB">
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="form-control-label">password</label>
-                                <input type="text" class="form-control" id="password">
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="signup">Save changes</button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="form-control-label">Name</label>
+                                    <input type="text" class="form-control" id="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Name" class="form-control-label">Email Address</label>
+                                    <input type="text" class="form-control" id="email-address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="DOB" class="form-control-label">Date of birth</label>
+                                    <input type="date" class="form-control" id="DOB">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="form-control-label">password</label>
+                                    <input type="text" class="form-control" id="password">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="signup">Save changes</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--input group for the login-button-->
 
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="form-group modal-form-group">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLongTitle"><strong>Login</strong></h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="Name" class="form-control-label">Email Address</label>
+                                    <input type="text" class="form-control" id="email-address2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="form-control-label">password</label>
+                                    <input type="text" class="form-control" id="password2">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="login">Login</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,10 +167,10 @@
     <script src="js/authentication.js" language="JavaScript"></script>
     <script src="js/fluid.js" language="JavaScript"></script>
 
-                    <script>
-                        //Second attempt at modal with jQuery
-                        //$('#loginSignUp').on('show.bs.modal', function (event) {
-                        /*var button = $(event.relatedTarget) // Button that triggered the modal
+    <script>
+        //Second attempt at modal with jQuery
+        //$('#loginSignUp').on('show.bs.modal', function (event) {
+        /*var button = $(event.relatedTarget) // Button that triggered the modal
   var recipient = button.data('whatever') // Extract info from data-* attributes
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
@@ -159,34 +179,34 @@
   modal.find('.modal-body input').val(recipient)
 })*/
 
-                        // var gauge1 = loadLiquidFillGauge("fillgauge1", 55);
+        // var gauge1 = loadLiquidFillGauge("fillgauge1", 55);
 
-                        // Get the modal
-                        // var modal = document.getElementById("#myModal");
+        // Get the modal
+        // var modal = document.getElementById("#myModal");
 
-                        // // Get the button that opens the modal
-                        // var btn = document.getElementById("button");
+        // // Get the button that opens the modal
+        // var btn = document.getElementById("button");
 
-                        // // Get the <span> element that closes the modal
-                        // var span = document.getElementsByClassName("close")[0];
+        // // Get the <span> element that closes the modal
+        // var span = document.getElementsByClassName("close")[0];
 
-                        // // When the user clicks on the button, open the modal
-                        // btn.onclick = function() {
-                        //     modal.style.display = "block";
-                        //  }
+        // // When the user clicks on the button, open the modal
+        // btn.onclick = function() {
+        //     modal.style.display = "block";
+        //  }
 
-                        // // // When the user clicks on the button<span> (x), close the modal
-                        // span.onclick = function() {
-                        //     modal.style.display = "none";
-                        //  }
+        // // // When the user clicks on the button<span> (x), close the modal
+        // span.onclick = function() {
+        //     modal.style.display = "none";
+        //  }
 
-                        // // // When the user clicks anywhere outside of the modal, close it
-                        //  window.onclick = function(event) {
-                        //      if (event.target == modal) {
-                        //         modal.style.display = "none";
-                        //      }
-                        //  }
-                    </script>
+        // // // When the user clicks anywhere outside of the modal, close it
+        //  window.onclick = function(event) {
+        //      if (event.target == modal) {
+        //         modal.style.display = "none";
+        //      }
+        //  }
+    </script>
 
 
 
