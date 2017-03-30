@@ -18,6 +18,8 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 
+
+
 $("#signup").on("click", function createUser() {
     var email = $("#email-address").val();
     var password = $("#password").val();
