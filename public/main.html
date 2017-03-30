@@ -49,7 +49,9 @@
         </section>
         <section id="middle">
             <h2>Do We Approve?</h2>
-            <svg id="fillgauge2" width="40%" height="200"></svg>
+            <!--*************ADJUSTED BACKGROUND COLOR OF FILL GAUGE - NEED TO FIND ORIGINAL CODE AND SWITCH OUT SO NOT INLINE*********-->
+
+            <svg id="fillgauge2" width="40%" height="200" style="background-color:#fff;"></svg>
 
             <h2>Videos</h2>
             <iframe width="345" height="318" src="https://www.youtube.com/embed/x2YLS80Nmls?list=PLmOU536QRyzjvq7NnQXK5ADoQJrBgWVfu&amp;showinfo=0"
@@ -62,12 +64,12 @@
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </aside>
 
-        <section id="bottom">
-            <h2>Trump Quotes!</h2>
-            <svg id="fillgauge2" width="75%" height="300" onclick="gauge2.update(NewValue());"></svg>-->
-            <iframe width="100%" height="318" src="/quotes" frameborder="0"></iframe>
-        </section>
+        <div>
+            <section id="bottom" style="width:960px; height:400px;">
 
+                <iframe width="100%" height="318" src="/quotes" frameborder="0"></iframe>
+            </section>
+        </div>
         <!--where old modal was-->
         <!-- Button trigger modal -->
 
@@ -78,10 +80,9 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
@@ -105,7 +106,6 @@
                                 <input type="text" class="form-control" id="password">
                             </div>
                         </form>
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -122,8 +122,12 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <!--**********************FOOTER***************************-->
@@ -137,10 +141,8 @@
                         <p>Developed by <a href="main.html">Trump Quotes</a></p>
                     </div>
                     <div class="col-md-2">
-                    <p><a href="/api/quotes">Quotes</a> | <a href="/graphs">Graph</a></p>
-
+                        <p><a href="/api/quotes">Quotes</a> | <a href="/graphs">Graph</a></p>
                     </div>
-
                 </div>
             </div>
         </footer>
@@ -150,6 +152,47 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="js/authentication.js" language="JavaScript"></script>
     <script src="js/fluid.js" language="JavaScript"></script>
+
+    <script>
+        //Second attempt at modal with jQuery
+        //$('#loginSignUp').on('show.bs.modal', function (event) {
+        /*var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})*/
+
+        // var gauge1 = loadLiquidFillGauge("fillgauge1", 55); 
+
+        // Get the modal
+        // var modal = document.getElementById("#myModal");
+
+        // // Get the button that opens the modal
+        // var btn = document.getElementById("button");
+
+        // // Get the <span> element that closes the modal
+        // var span = document.getElementsByClassName("close")[0];
+
+        // // When the user clicks on the button, open the modal 
+        // btn.onclick = function() {
+        //     modal.style.display = "block";
+        //  }
+
+        // // // When the user clicks on the button<span> (x), close the modal
+        // span.onclick = function() {
+        //     modal.style.display = "none";
+        //  }
+
+        // // // When the user clicks anywhere outside of the modal, close it
+        //  window.onclick = function(event) {
+        //      if (event.target == modal) {
+        //         modal.style.display = "none";
+        //      }
+        //  }
+    </script>
 
 
 

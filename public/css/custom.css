@@ -3,6 +3,7 @@
 body.body {
     background-image: url("../images/flag2.1.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -284,6 +285,7 @@ header {
     padding: 5px 15px;
     margin: 0px 5px 5px 5px;
     text-align: center;
+    background-color:#D8D5C9;
 }
 
 #sidebar {
@@ -310,6 +312,7 @@ header {
 footer {
     clear: both;
     padding: 0 15px;
+    background-color:#D8D5C9;
 }
 
 
