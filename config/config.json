@@ -3,21 +3,21 @@
         "username": "root",
         "password": "root",
         "database": "trump_really",
-        "port": "8889",
+        "port": "3306",
         "dialect": "mysql"
     },
     "test": {
         "username": "root",
         "password": "root",
         "database": "trump_really",
-        "port": "8889",
+        "port": "3306",
         "dialect": "mysql"
     },
     "production": {
         "username": "root",
         "password": "root",
         "database": "trump_really",
-        "port": "8889",
+        "port": "3306",
         "dialect": "mysql"
     }
 }
