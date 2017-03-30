@@ -63,139 +63,74 @@
   });
 
 
-  function createUser () {
+  function createUser() {
       firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-              // Handle Errors here.
-              console.log(error.code);
-              console.log(error.message);
-              alert(error.message);
-              // ...
-          }).then(function (onResolve, onReject) {
-              console.log(onResolve);
-              console.log(onReject);
-              database.ref("/users/" + onResolve.uid).set({
-                  name: name,
-                  email: email,
-                  DOB: dob,
-                  password: password
-              });
-       
+          // Handle Errors here.
+          console.log(error.code);
+          console.log(error.message);
+          alert(error.message);
+          // ...
+      }).then(function (onResolve, onReject) {
+          console.log(onResolve);
+          console.log(onReject);
+          database.ref("/users/" + onResolve.uid).set({
+              name: name,
+              email: email,
+              DOB: dob,
+              password: password,
+              username: userName
           });
+
+      });
 
       // $.modal.close();
   }
 
+  $("#logout").on("click", function () {
+      signOut();
+  });
 
-  // $("#login").on("click", function login() {
-  //     var email = $("#email-address2").val();
-  //     var password = $("#password2").val();
-  //     firebase.auth().signInWithEmailAndPassword(email, password)
-  //         .catch(function (error) {
-  //             // Handle Errors here.
-  //             var errorCode = error.code;
-  //             var errorMessage = error.message;
-  //             console.log(errorCode);
-  //             console.log(errorMessage);
-  //         }).then(function (onResolve, onReject) {
-  //             console.log(onResolve);
-  //             console.log(onReject);
-  //             var thisUser = database.ref("/users/" + onResolve.uid);
+  $("#login").on("click", function () {
+      email = $("#email-address2").val();
+      password = $("#password2").val();
+      signIn();
+  });
 
-  //             displayUser(thisUser.name);
-  //             $("#email-address2").val("");
-  //             $("#password2").val("");
-  //         });
+  function signIn() {
+      firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log(errorCode);
+          console.log(errorMessage);
+          alert("incorrect email/password combination");
 
+      }).then(function (onResolve, onReject) {
+          console.log(onResolve);
 
-  // });
-  // $("#logout").on("click", function () {
+          if (onResolve) {
+              database.ref("/users/" + onResolve.uid).on("value", function (snapshot) {
+                  userName = snapshot.val().username;
+              });
+              setTimeout(alertLogin, 1500);
+              email = $("#email-address2").val("");
+              password = $("#password2").val("");
+          } else {
+              console.log(onReject);
+          }
 
-  //     signOut();
-
-
-  // });
-  // $("#submituser").on("click", function () {
-  //     userName = $("#username").val();
-  //     password = $("#password").val();
-
-  //     signIn();
-
-
-  // });
+      });
+  }
 
 
+  function signOut() {
+      firebase.auth().signOut().then(function () {
+          alert(userName + " you are signed out. Come back soon!!!");
+      }, function (error) {
+          console.log(error);
+      });
+  }
 
-
-  // function displayUser(userName) {
-  //     $("#displayUser").html(userName + " is logged in");
-
-  // }
-
-  // function signOut() {
-  //     firebase.auth().signOut().then(function () {
-  //         console.log("you are signed out");
-  //     }, function (error) {
-  //         console.log(error);
-  //     });
-  // }
-
-
-
-  // ---------------------------------------------------------------------------//
-
-//   $("#logout").on("click", function () {
-
-//       signOut();
-
-
-//   });
-//   $("#submituser").on("click", function () {
-//       userName = $("#username").val();
-//       password = $("#password").val();
-
-//       signIn();
-
-
-//   });
-
-
-
-
-//   function displayUser() {
-//       $("#displayUser").html(userName + " is logged in");
-
-//   }
-
-//   function createUser() {
-//       firebase.auth().createUserWithEmailAndPassword("jwin4740@gmail.com", "helloworld").catch(function (error) {
-//           // Handle Errors here.
-//           var errorCode = error.code;
-//           var errorMessage = error.message;
-//           // ...
-//       });
-//   }
-
-
-//   function signIn() {
-//       firebase.auth().signInWithEmailAndPassword(userName, password).catch(function (error) {
-//           // Handle Errors here.
-//           var errorCode = error.code;
-//           var errorMessage = error.message;
-//           console.log(errorCode);
-//           console.log(errorMessage);
-//           displayUser();
-//           $("#username").val("");
-//           $("#password").val("");
-//       });
-
-
-//   }
-
-
-//   function signOut() {
-//       firebase.auth().signOut().then(function () {
-//           console.log("you are signed out");
-//       }, function (error) {
-//           console.log(error);
-//       });
-//   }
+  function alertLogin() {
+      alert("Welcome back " + userName);
+  }
