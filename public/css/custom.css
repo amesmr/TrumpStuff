@@ -17,10 +17,11 @@ div.jumbotron {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
 
 
-/*Updated stamp. If this works, get rid of the stamp below*/
+/*Trump stamp with 45cent in right hand corner*/
 
 div.stamp {
     width: 400px;
@@ -35,15 +36,9 @@ div.stamp {
 }
 
 
-/*div.stamp {
-    background-image: url("../images/trump5.1.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    height: 380px;
-    width: 380px;
-}*/
-
-.center {
+div.center {
+    /*z-index: 100;*/
+    display: inline-block;
     position: absolute;
     color: #fff;
     margin: 10px 10px 0 0;
@@ -51,48 +46,27 @@ div.stamp {
     /*text-align: right;*/
     /*center: 30px;*/
     top: 40px;
-    right: 12.5em;
+    right: 755px;
 }
 
 
-/*Title*/
+/*Trump Stuff Title*/
 
 h1 {
     font-family: 'Luckiest Guy', cursive !important;
     color: red !important;
-    text-shadow: 3px 2px black;
+    text-shadow: 3px 2px white;
     -webkit-animation-duration: 1s;
     -webkit-animation-delay: 4s;
     -webkit-animation-iteration-count: 3;
-    border: darkgoldenrod;
+    
 }
-
-@-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-@keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
+/*there was a keyframes for "animatetop here. Lines 63-86*/
 
 
 /*jumbotron buttons*/
 
-button.btn.btn-primary.btn-sm {
+button.btn.btn-primary.btn-lg {
     border: 2px solid #0a3c59;
     background: #9cd7ff;
     background: -webkit-gradient(linear, left top, left bottom, from(#005e9c), to(#9cd7ff));
@@ -116,7 +90,7 @@ button.btn.btn-primary.btn-sm {
     vertical-align: middle;
 }
 
-button.btn.btn-primary.btn-sm:hover {
+button.btn.btn-primary.btn-lg:hover {
     border: 2px solid #0a3c59;
     text-shadow: #1e4158 0 1px 0;
     background: #3e779d;
@@ -129,7 +103,7 @@ button.btn.btn-primary.btn-sm:hover {
     color: #fff;
 }
 
-button.btn.btn-primary.btn-sm:active {
+button.btn.btn-primary.btn-lg:active {
     text-shadow: #1e4158 0 1px 0;
     border: 2px solid #0a3c59;
     background: #65a9d7;
@@ -141,12 +115,17 @@ button.btn.btn-primary.btn-sm:active {
     background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
     color: #fff;
 }
+/*fill gauge*/
+svg#fillgauge2 {
+    background-color: black;
+}
+/*Modal body and buttons*/
 
 .modal-body {
     padding: 7px;
 }
 
-button.btn.btn-primary.btn-sm:focus {
+button.btn.btn-primary.btn-lg:focus {
     outline: 0;
 }
 
@@ -299,7 +278,7 @@ button.btn.btn-primary.submit:focus {
 
 /*End modal*/
 
-body {
+/*body {
     font-family: 'Open Sans', sans-serif;
     color: #666;
 }
@@ -315,7 +294,7 @@ body {
 
 .neutral {
     background-color: #D8D5C9 !important;
-}
+}*/
 
 
 /* STRUCTURE */
@@ -373,10 +352,6 @@ aside#sidebar {
     color: white;
 }
 
-/*section#bottom {
-    width: 0;
-    height: 0;
-}*/
 
 .panel-body,
 .quote-label {
@@ -532,15 +507,15 @@ footer {
 
 /* Stay in place */
 
-width: 282px;
+/*width: 282px;*/
 
 /* Full width */
 
-height: 390.78px;
+/*height: 390.78px;*/
 
 /* Full height */
 
-background-color:#003366;
+/*background-color:#003366;
 margin: auto;
 padding: 0;
 border: 1px solid #003366;
@@ -552,10 +527,10 @@ box-shadow: 0 3px 13px 0 rgba(0,
 -webkit-animation-duration: 0.4s;
 animation-name: animatetop;
 animation-duration: 0.4s
-}
+}*/
 
 /* Modal Body */
-.modal-body {
+/*.modal-body {
     text-align: center;
     box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.1);
     border-style: solid;
@@ -581,7 +556,7 @@ animation-duration: 0.4s
 }
 .panel-body {
     background-color: #D8D5C9;
-}
+}*/
 
 /* Close Button */
 .close {
@@ -615,7 +590,7 @@ button.send:hover {
     background-color: #506a85;
     opacity: 1;
 }
-.form-control {
+/*.form-control {
     /*Overrode bootstrap so not using
     display:block;
     padding: 6px 12px;
@@ -624,15 +599,15 @@ button.send:hover {
     border-style:solid;
     border-width:1px;*/
 
-    border-color: #003366 !important;
-    background-color: #D8D5C9 !important;
+    /*border-color: #003366 !important;
+    background-color: #D8D5C9 !important;*/
     /* outline:0;
     color:#000;
     font-size:14px;
     line-height:1.428571429;
     vertical-align:middle;*/
 }
-input#sign-up name.form-control {
+/*input#sign-up name.form-control {
     padding: 0.5em;
     font-family: inherit;
     box-sizing: border-box;
@@ -640,8 +615,8 @@ input#sign-up name.form-control {
     cursor: auto;
     border-radius: 3px;
     background-color: #D8D5C9 !important;
-}
-input#sign-up email.form-control {
+}*/
+/*input#sign-up email.form-control {
     padding: 0.5em;
     font-family: inherit;
     box-sizing: border-box;
@@ -658,10 +633,10 @@ input#DOB.form-control {
     cursor: auto;
     border-radius: 3px;
     background-color: #D8D5C9;
-}
+}*/
 
 /* Add Animation */
-@-webkit-keyframes animatetop {
+/*@-webkit-keyframes animatetop {
     from {
         top: -300px;
         opacity: 0
@@ -682,4 +657,4 @@ input#DOB.form-control {
         top: 0;
         opacity: 1
     }
-}
+}*/
