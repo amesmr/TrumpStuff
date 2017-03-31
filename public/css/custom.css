@@ -64,6 +64,7 @@ h1 {
     -webkit-animation-duration: 1s;
     -webkit-animation-delay: 4s;
     -webkit-animation-iteration-count: 3;
+    border: darkgoldenrod;
 }
 
 @-webkit-keyframes animatetop {
