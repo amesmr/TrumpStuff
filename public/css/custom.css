@@ -583,13 +583,13 @@ animation-duration: 0.4s
 /*Modal Submit Button
 button.btn.btn-primary.submit {
 }*/
-button.send:hover {
+/*button.send:hover {
     text-decoration: none;
     cursor: pointer;
     color: #1abb9c;
     background-color: #506a85;
     opacity: 1;
-}
+}*/
 /*.form-control {
     /*Overrode bootstrap so not using
     display:block;
