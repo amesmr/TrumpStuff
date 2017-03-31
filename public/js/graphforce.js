@@ -1,10 +1,10 @@
        // constructor Link function
-       function NodeConstruct(name, color, layer, linkType, index) {
+       function NodeConstruct(name, color, layer, linkType, position) {
            this.name = name;
            this.color = color;
            this.layer = layer;
            this.linkType = linkType;
-           this.index = index;
+           this.position = position;
 
        }
 
@@ -22,7 +22,7 @@
 
 
        var forceDataArray = [];
-       //    getthedata();
+       getthedata();
        var nodesArray = [];
        var linksArray = [{
                source: 0,
@@ -30,9 +30,59 @@
                distance: 100
            },
            {
-               source: 1,
+               source: 0,
                target: 2,
-               distance: 25
+               distance: 100
+           }, {
+               source: 1,
+               target: 3,
+               distance: 60
+           }, {
+               source: 2,
+               target: 4,
+               distance: 60
+           },
+           {
+               source: 3,
+               target: 5,
+               distance: 60
+           }, {
+               source: 3,
+               target: 10,
+               distance: 60
+           }, {
+               source: 3,
+               target: 11,
+               distance: 60
+           }, {
+               source: 3,
+               target: 12,
+               distance: 60
+           }, {
+               source: 3,
+               target: 13,
+               distance: 60
+           },
+           {
+               source: 3,
+               target: 14,
+               distance: 60
+           }, {
+               source: 4,
+               target: 6,
+               distance: 60
+           }, {
+               source: 4,
+               target: 7,
+               distance: 60
+           }, {
+               source: 4,
+               target: 8,
+               distance: 60
+           }, {
+               source: 4,
+               target: 9,
+               distance: 60
            }
        ];
 
@@ -44,8 +94,8 @@
                .done(function (data) {
                    var n = data.length;
                    for (var i = 0; i < n; i++) {
-                       if (data[i].index != 999) {
-                           var node = new NodeConstruct(data[i].tweet, "white", data[i].layer, data[i].linkType, data[i].index);
+                       if (data[i].position != 999) {
+                           var node = new NodeConstruct(data[i].tweet, "white", data[i].layer, data[i].linkType, data[i].position);
                            nodesArray.push(node);
                        }
                    }
@@ -56,188 +106,188 @@
 
 
 
-    //    function layout() {
-    //        var parsedData = {
-    //            nodes: nodesArray,
-    //            links: linksArray
-    //        };
+       function layout() {
            var parsedData = {
-               nodes: [{
-
-                       name: "ROOT",
-                       color: "white",
-                       size: 20,
-                       layer: 0,
-                       index: 0
-
-                   },
-
-                   // main branches
-                   {
-                       name: "himself",
-                       color: "red",
-                       size: 10,
-                       layer: 1,
-                       index: 1
-
-
-                   },
-                   {
-                       name: "defenses",
-                       color: "green",
-                       size: 10,
-                       layer: 1,
-                       index: 2
-
-                   },
-                   {
-                       name: "celebrity",
-                       color: "yellow",
-                       size: 10,
-                       layer: 1,
-                       index: 3
-
-                   }, {
-                       name: "debates",
-                       color: "brown",
-                       size: 10,
-                       layer: 1,
-                       index: 4
-
-                   }, {
-                       name: "clintons",
-                       color: "grey",
-                       size: 10,
-                       layer: 1,
-                       index: 5
-
-                   }, {
-                       name: "nicknames",
-                       color: "lawngreen",
-                       size: 10,
-                       layer: 1,
-                       index: 6
-
-                   },
-
-                   // level 2 branches
-
-                   {
-                       name: "Little Marco",
-                       color: "violet",
-                       size: 5,
-                       layer: 2,
-                       index: 7
-
-                   }, {
-                       name: "Lyin Ted",
-                       color: "violet",
-                       size: 5,
-                       layer: 2,
-                       index: 8
-
-                   }, {
-                       name: "Crooked Hillary",
-                       color: "violet",
-                       size: 5,
-                       layer: 2,
-                       index: 9
-
-                   }, {
-                       name: "Low energy Jeb",
-                       color: "violet",
-                       size: 5,
-                       layer: 2,
-                       index: 10
-
-                   },
-                   // third layer
-                   {
-                       name: "jeb off stage",
-                       color: "green",
-                       size: 5,
-                       layer: 3,
-                       index: 11
-
-                   }, {
-                       name: "tough guy",
-                       color: "green",
-                       size: 5,
-                       layer: 3,
-                       index: 12
-
-                   }, {
-                       name: "real tough guy",
-                       color: "green",
-                       size: 5,
-                       layer: 3,
-                       index: 13
-                   }
-               ],
-               links: [{
-                       source: 0,
-                       target: 1,
-                       sourceText: "root",
-                       targetText: "himself",
-                       linkType: "main",
-                       distance: 100
-                   },
-                   {
-                       source: 0,
-                       target: 2,
-                       distance: 100
-                   },
-                   {
-                       source: 0,
-                       target: 3,
-                       distance: 100
-                   }, {
-                       source: 0,
-                       target: 4,
-                       distance: 100
-                   }, {
-                       source: 0,
-                       target: 5,
-                       distance: 100
-                   }, {
-                       source: 0,
-                       target: 6,
-                       distance: 100
-                   }, {
-                       source: 0,
-                       target: 7,
-                       distance: 100
-                   }, {
-                       source: 6,
-                       target: 8,
-                       distance: 75
-                   }, {
-                       source: 6,
-                       target: 9,
-                       distance: 75
-                   }, {
-                       source: 6,
-                       target: 10,
-                       distance: 75
-                   }, {
-                       source: 6,
-                       target: 11,
-                       distance: 75
-                   }, {
-                       source: 11,
-                       target: 12,
-                       distance: 75
-                   }, {
-                       source: 11,
-                       target: 13,
-                       distance: 75
-                   }
-               ]
+               nodes: nodesArray,
+               links: linksArray
            };
+           //    var parsedData = {
+           //        nodes: [{
+
+           //                name: "ROOT",
+           //                color: "white",
+           //                size: 20,
+           //                layer: 0,
+           //                index: 0
+
+           //            },
+
+           //            // main branches
+           //            {
+           //                name: "himself",
+           //                color: "red",
+           //                size: 10,
+           //                layer: 1,
+           //                index: 1
 
 
-           var width = 1200;
-           var height = 700;
+           //            },
+           //            {
+           //                name: "defenses",
+           //                color: "green",
+           //                size: 10,
+           //                layer: 1,
+           //                index: 2
+
+           //            },
+           //            {
+           //                name: "celebrity",
+           //                color: "yellow",
+           //                size: 10,
+           //                layer: 1,
+           //                index: 3
+
+           //            }, {
+           //                name: "debates",
+           //                color: "brown",
+           //                size: 10,
+           //                layer: 1,
+           //                index: 4
+
+           //            }, {
+           //                name: "clintons",
+           //                color: "grey",
+           //                size: 10,
+           //                layer: 1,
+           //                index: 5
+
+           //            }, {
+           //                name: "nicknames",
+           //                color: "lawngreen",
+           //                size: 10,
+           //                layer: 1,
+           //                index: 6
+
+           //            },
+
+           //            // level 2 branches
+
+           //            {
+           //                name: "Little Marco",
+           //                color: "violet",
+           //                size: 5,
+           //                layer: 2,
+           //                index: 7
+
+           //            }, {
+           //                name: "Lyin Ted",
+           //                color: "violet",
+           //                size: 5,
+           //                layer: 2,
+           //                index: 8
+
+           //            }, {
+           //                name: "Crooked Hillary",
+           //                color: "violet",
+           //                size: 5,
+           //                layer: 2,
+           //                index: 9
+
+           //            }, {
+           //                name: "Low energy Jeb",
+           //                color: "violet",
+           //                size: 5,
+           //                layer: 2,
+           //                index: 10
+
+           //            },
+           //            // third layer
+           //            {
+           //                name: "jeb off stage",
+           //                color: "green",
+           //                size: 5,
+           //                layer: 3,
+           //                index: 11
+
+           //            }, {
+           //                name: "tough guy",
+           //                color: "green",
+           //                size: 5,
+           //                layer: 3,
+           //                index: 12
+
+           //            }, {
+           //                name: "real tough guy",
+           //                color: "green",
+           //                size: 5,
+           //                layer: 3,
+           //                index: 13
+           //            }
+           //        ],
+           //        links: [{
+           //                source: 0,
+           //                target: 1,
+           //                sourceText: "root",
+           //                targetText: "himself",
+           //                linkType: "main",
+           //                distance: 100
+           //            },
+           //            {
+           //                source: 0,
+           //                target: 2,
+           //                distance: 100
+           //            },
+           //            {
+           //                source: 0,
+           //                target: 3,
+           //                distance: 100
+           //            }, {
+           //                source: 0,
+           //                target: 4,
+           //                distance: 100
+           //            }, {
+           //                source: 0,
+           //                target: 5,
+           //                distance: 100
+           //            }, {
+           //                source: 0,
+           //                target: 6,
+           //                distance: 100
+           //            }, {
+           //                source: 0,
+           //                target: 7,
+           //                distance: 100
+           //            }, {
+           //                source: 6,
+           //                target: 8,
+           //                distance: 75
+           //            }, {
+           //                source: 6,
+           //                target: 9,
+           //                distance: 75
+           //            }, {
+           //                source: 6,
+           //                target: 10,
+           //                distance: 75
+           //            }, {
+           //                source: 6,
+           //                target: 11,
+           //                distance: 75
+           //            }, {
+           //                source: 11,
+           //                target: 12,
+           //                distance: 75
+           //            }, {
+           //                source: 11,
+           //                target: 13,
+           //                distance: 75
+           //            }
+           //        ]
+           //    };
+
+
+           var width = 700;
+           var height = 500;
 
            var svg = d3.select("#force")
                .attr("width", width)
@@ -247,7 +297,7 @@
                .force("link", d3.forceLink().distance(function (d) {
                    return d.distance;
                }).strength(2))
-               //  .force("center", d3.forceCenter(width / 2, height / 2))
+               .force("center", d3.forceCenter(width / 2, height / 2))
                .force("charge", d3.forceManyBody());
 
 
@@ -386,4 +436,4 @@
                d.fx = null;
                d.fy = null;
            }
-       
+       }
