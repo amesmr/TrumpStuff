@@ -12,14 +12,16 @@ body.body {
 /*background-image for jumbotron*/
 
 div.jumbotron {
-    background-image: url("../images/stars3.jpg");/*add picture of postage stamp and Trump here*/
+    background-image: url("../images/stars3.jpg");
+    /*add picture of postage stamp and Trump here*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
 
+
 /*Updated stamp. If this works, get rid of the stamp below*/
+
 div.stamp {
     width: 400px;
     height: 400px;
@@ -28,18 +30,17 @@ div.stamp {
     background: radial-gradient(transparent, transparent 7px, white 7px, white);
     background-size: 20px 20px;
     background-position: -9px -9px;
-    -webkit-filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
+    -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
     margin: auto;
-    
 }
 
-
- div.stamp.p {
+div.stamp.p {
     color: #fff;
     margin: 10px 10px 0 0;
     font: bold 60px Georgia, "Times New Roman", Times, serif;
     text-align: right;
 }
+
 
 /*.stamp {
     width: 500px;
@@ -47,8 +48,6 @@ div.stamp {
     background: #fff url("../images/trump5.jpg") no-repeat;
     border: 12px dashed #1b1a19;
 }*/
-
-
 
 
 /*Title*/
@@ -150,7 +149,7 @@ button.btn.btn-primary.btn-sm:focus {
 }
 
 #pass {
-    font-size : 12px; 
+    font-size: 12px;
 }
 
 
@@ -198,7 +197,7 @@ div.form-group {
     box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(000, 000, 000, 0.7) 0 0px 0px;
     padding: 8px;
     margin-bottom: 20px;
-    /*width: 280px;*/
+    /* width: 280px; */
 }
 
 div.modal-form-group {
@@ -207,6 +206,7 @@ div.modal-form-group {
 
 div.modal-content {
     background-color: transparent;
+    width: 320px;
 }
 
 .form-field:focus {
@@ -344,12 +344,10 @@ section#middle {
     padding: 5px 15px;
     margin: 0px 5px 5px 5px;
     text-align: center;
-
     /*background-color:#D8D5C9;*/
     background: rgba(0, 0, 0, 0.4);
     font-family: 'Cinzel', serif;
     color: white;
-
 }
 
 aside#sidebar {
@@ -357,12 +355,10 @@ aside#sidebar {
     padding: 5px 15px;
     float: left;
     text-align: center;
-
     /*background-color: #D8D5C9 !important;*/
     background: rgba(0, 0, 0, 0.4);
     font-family: 'Cinzel', serif;
     color: white;
-
 }
 
 .panel-body,
