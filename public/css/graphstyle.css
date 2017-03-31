@@ -210,3 +210,26 @@ line.link {
 .forceCircle {
     cursor: pointer;
 }
+
+.dropdown-toggle,
+.btn-link,
+.navbar-brand,
+.navbar-toggle,
+.nav-container .navbar {
+    border: 1px solid darkslategray;
+    background: #182987;
+    background: -webkit-gradient(linear, left top, left bottom, from(#d4d9ff), to(#182987));
+    background: -webkit-linear-gradient(top, #d4d9ff, #182987);
+    background: -moz-linear-gradient(top, #d4d9ff, #182987);
+    background: -ms-linear-gradient(top, #d4d9ff, #182987);
+    background: -o-linear-gradient(top, #d4d9ff, #182987);
+    background-image: -ms-linear-gradient(top, #d4d9ff 0%, #182987 100%);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    color: white;
+    font-family: helvetica, serif;
+    font-size: 14px;
+    text-decoration: none;
+    vertical-align: middle;
+}
