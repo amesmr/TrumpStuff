@@ -19,180 +19,177 @@
 
 <body class="body">
 
-        <!--<nav class="navbar navbar-default">
-            <div class="container nav-container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                        aria-controls="navbar">
+    <nav class="navbar navbar-default">
+        <div class="container nav-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                    <div class="navbar-brand">Trump Stuff</div>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-
-                        <li class="btn-link"><a href="/">Home</a></li>
-                        <li class="dropdown">
-
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigate<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header btn-header">Trump Tweets</li>
-                                <li class="btn btn-primary btn-link"><a href="/graphs">Graphs</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li class="dropdown-header btn-header">Collection of Quotes</li>
-                                <li class="btn btn-primary btn-link"><a href="/quotes">Quotes</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                </div>
+                <div class="navbar-brand">Trump Stuff</div>
             </div>
-        </nav>
-
-        <div class="jumbotron">
-            <div class="stamp">
-                <img src="images/trump5.1.jpg" height="379" width="379" alt="stampEffect">
-                <div class="center">45&cent;</div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="btn-link"><a href="/">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigate<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header btn-header">Trump Tweets</li>
+                            <li class="btn btn-primary btn-link"><a href="/graphs">Graphs</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header btn-header">Collection of Quotes</li>
+                            <li class="btn btn-primary btn-link"><a href="/quotes">Quotes</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-            <h1 class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 animated wobble">Trump Stuff!</h1><br>
-            <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
-                <!--These buttons connect to the modal below-->
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signupModal">Sign-up</button>
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">Login</button>
-            </div>
-
         </div>
-        <div id="pagewrap">
-            <section id="content">
-                <h2>Trending #Trump Tweets</h2>
-                <a class="twitter-timeline" href="https://twitter.com/hashtag/trump" data-width="238" data-height="600" data-theme="dark"
-                    data-widget-id="845610628609925124"></a>
-                <script>
-                    ! function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0],
-                            p = /^http:/.test(d.location) ? 'http' : 'https';
-                        if (!d.getElementById(id)) {
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = p + "://platform.twitter.com/widgets.js";
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }
-                    }(document, "script", "twitter-wjs");
-                </script>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="stamp">
+            <img src="images/trump5.1.jpg" height="379" width="379" alt="stampEffect">
+            <div class="center">45&cent;</div>
+        </div>
+        <h1 class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 animated wobble">Trump Stuff!</h1><br>
+        <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
+            <!--These buttons connect to the modal below-->
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signupModal">Sign-up</button>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">Login</button>
+        </div>
+
+    </div>
+    <div id="pagewrap">
+        <section id="content">
+            <h2>Trending #Trump Tweets</h2>
+            <a class="twitter-timeline" href="https://twitter.com/hashtag/trump" data-width="238" data-height="600" data-theme="dark"
+                data-widget-id="845610628609925124"></a>
+            <script>
+                ! function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0],
+                        p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");
+            </script>
+        </section>
+        <section id="middle">
+            <h2>Do We Approve?</h2>
+            <!--*************ADJUSTED BACKGROUND COLOR OF FILL GAUGE - NEED TO FIND ORIGINAL CODE AND SWITCH OUT SO NOT INLINE*********-->
+
+            <svg id="fillgauge2" width="40%" height="200" style="background-color:#fff;"></svg>
+
+            <h2>Videos</h2>
+            <iframe width="345" height="318" src="https://www.youtube.com/embed/x2YLS80Nmls?list=PLmOU536QRyzjvq7NnQXK5ADoQJrBgWVfu&amp;showinfo=0"
+                frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <aside id="sidebar">
+            <h2>What's "The Donald" Saying?</h2>
+            <a class="twitter-timeline" data-width="260" data-height="567" data-theme="dark" href="https://twitter.com/realDonaldTrump">Tweets by realDonaldTrump</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </aside>
+
+
+        <div>
+            <section id="bottom">
+
+
+                <iframe width="947px" height="500px" src="/quotes" frameborder="0"></iframe>
             </section>
-            <section id="middle">
-                <h2>Do We Approve?</h2>
-                <!--*************ADJUSTED BACKGROUND COLOR OF FILL GAUGE - NEED TO FIND ORIGINAL CODE AND SWITCH OUT SO NOT INLINE*********-->
+        </div>
+        <!--where old modal was-->
+        <!-- Button trigger modal -->
 
-                <svg id="fillgauge2" width="40%" height="200" style="background-color:#fff;"></svg>
-
-                <h2>Videos</h2>
-                <iframe width="345" height="318" src="https://www.youtube.com/embed/x2YLS80Nmls?list=PLmOU536QRyzjvq7NnQXK5ADoQJrBgWVfu&amp;showinfo=0"
-                    frameborder="0" allowfullscreen></iframe>
-            </section>
-
-            <aside id="sidebar">
-                <h2>What's "The Donald" Saying?</h2>
-                <a class="twitter-timeline" data-width="260" data-height="567" data-theme="dark" href="https://twitter.com/realDonaldTrump">Tweets by realDonaldTrump</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </aside>
-
-
-            <div>
-                <section id="bottom">
-
-
-                    <iframe width="947px" height="500px" src="/quotes" frameborder="0"></iframe>
-                </section>
-            </div>
-            <!--where old modal was-->
-            <!-- Button trigger modal -->
-
-            <!-- Modal -->
-            <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="form-group modal-form-group">
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="exampleModalLongTitle"><strong>Sign Up</strong></h3>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <!-- Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="form-group modal-form-group">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLongTitle"><strong>Sign Up</strong></h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="recipient-name" class="form-control-label">Name</label>
-                                        <input type="text" class="form-control" id="Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Name" class="form-control-label">Email Address</label>
-                                        <input type="text" class="form-control" id="email-address">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="DOB" class="form-control-label">Date of birth</label>
-                                        <input type="date" class="form-control" id="DOB">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="userName" class="form-control-label">Username</label>
-                                        <input type="text" class="form-control" id="userName">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password" class="form-control-label">Password<span id="pass"> (must be longer then 6 characters)</span></label>
-                                        <input type="password" class="form-control" id="password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="confirmPassword" class="form-control-label"> Confirm Password</label>
-                                        <input type="password" class="form-control" id="confirmPassword">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" id="signup">Save changes</button>
-                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!--input group for the login-button-->
-
-            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="form-group modal-form-group">
-                            <div class="modal-header">
-                                <h3 class="modal-title" id="exampleModalLongTitle"><strong>Login</strong></h3>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="Name" class="form-control-label">Email Address</label>
-                                        <input type="text" class="form-control" id="email-address2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password" class="form-control-label">password</label>
-                                        <input type="password" class="form-control" id="password2">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" id="login">Login</button>
-                                <button type="button" class="btn btn-primary" id="logout">Logout</button>
-                            </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="form-control-label">Name</label>
+                                    <input type="text" class="form-control" id="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Name" class="form-control-label">Email Address</label>
+                                    <input type="text" class="form-control" id="email-address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="DOB" class="form-control-label">Date of birth</label>
+                                    <input type="date" class="form-control" id="DOB">
+                                </div>
+                                <div class="form-group">
+                                    <label for="userName" class="form-control-label">Username</label>
+                                    <input type="text" class="form-control" id="userName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="form-control-label">Password<span id="pass"> (must be longer then 6 characters)</span></label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword" class="form-control-label"> Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="signup">Save changes</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!--input group for the login-button-->
+
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="form-group modal-form-group">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLongTitle"><strong>Login</strong></h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="Name" class="form-control-label">Email Address</label>
+                                    <input type="text" class="form-control" id="email-address2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="form-control-label">password</label>
+                                    <input type="password" class="form-control" id="password2">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="login">Login</button>
+                            <button type="button" class="btn btn-primary" id="logout">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--</div>-->
 
 
