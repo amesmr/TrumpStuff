@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var Tweets = sequelize.define("tweets", {
+  var Tweets = sequelize.define("all_tweets", {
     tweet_number: {
       type: DataTypes.INTEGER,
       primaryKey: true,
