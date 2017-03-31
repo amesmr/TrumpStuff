@@ -3,7 +3,7 @@
 /*this is the background image*/
 
 body.body {
-    background-image: url("../images/flag2.jpg");
+    background-image: url("../images/stripes.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -12,10 +12,11 @@ body.body {
 /*background-image for jumbotron*/
 
 div.jumbotron {
-    background-image: url();
+    background-image: url("../images/stars.jpg");
     /*add picture of postage stamp and Trump here*/
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
 }
 
 
@@ -24,7 +25,7 @@ div.jumbotron {
 div.stamp {
     width: 400px;
     height: 400px;
-    padding: 8px;
+    padding: 10px;
     background: #fff;
     background: radial-gradient(transparent, transparent 7px, white 7px, white);
     background-size: 20px 20px;
@@ -33,20 +34,25 @@ div.stamp {
     margin: auto;
 }
 
-div.stamp.p {
+
+/*div.stamp {
+    background-image: url("../images/trump5.1.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 380px;
+    width: 380px;
+}*/
+
+.center {
+    position: absolute;
     color: #fff;
     margin: 10px 10px 0 0;
     font: bold 60px Georgia, "Times New Roman", Times, serif;
-    text-align: right;
+    /*text-align: right;*/
+    /*center: 30px;*/
+    top: 40px;
+    right: 12.5em;
 }
-
-
-/*.stamp {
-    width: 500px;
-    height: 414px;
-    background: #fff url("../images/trump5.jpg") no-repeat;
-    border: 12px dashed #1b1a19;
-}*/
 
 
 /*Title*/
