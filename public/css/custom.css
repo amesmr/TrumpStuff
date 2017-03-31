@@ -332,6 +332,7 @@ section#content {
     width: 270px;
     float: left;
     padding: 5px 15px;
+    margin: 0px 0px 0px 6px;
     text-align: center;
     /*background-color: #D8D5C9 !important;*/
     background: rgba(0, 0, 0, 0.4);
@@ -341,10 +342,12 @@ section#content {
 
 section#middle {
     width: 375px;
+    height: 714px;
     /* Account for margins + border values - was seet to 294*/
+    height: 714px;
     float: left;
-    padding: 5px 15px;
-    margin: 0px 5px 5px 5px;
+    padding: 27px 15px;
+    margin: 0px 10px 5px 10px;
     text-align: center;
     /*background-color:#D8D5C9;*/
     background: rgba(0, 0, 0, 0.4);
@@ -362,6 +365,11 @@ aside#sidebar {
     font-family: 'Cinzel', serif;
     color: white;
 }
+
+/*section#bottom {
+    width: 0;
+    height: 0;
+}*/
 
 .panel-body,
 .quote-label {
