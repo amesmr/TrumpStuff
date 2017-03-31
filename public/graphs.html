@@ -6,15 +6,58 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="/css/graphstyle.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container totustuus">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand" href="#">Trump Stuff</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <!--
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigate<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Trump Tweets</li>
+                                <li><a href="/graphs">Graphs</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Collection of Quotes</li>
+                                <li><a href="/quotes">Quotes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="../navbar/">Default</a></li>
+                        <li><a href="../navbar-static-top/">Static top</a></li>
+                        <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                    -->
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
         <h3 id="mainHeader"> Trump Data Analytics </h3>
         <hr>
         <div class="row firstRow">
-            <div style="padding-right: 0px"; class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <div style="padding-right: 0px" ; class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <strong><h6 class="panel-title titleAlign">Trump Twitter Follower Trends</h6></strong>
@@ -45,7 +88,7 @@
             </div>
         </div>
         <div class="row">
-            <div style="padding-right: 0px"; class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <div style="padding-right: 0px" ; class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <strong><h6 class="panel-title titleAlign">Keyword Analysis</h6></strong>
@@ -55,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div style="padding-left: 0px"; class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+            <div style="padding-left: 0px" ; class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <strong><h6 class="panel-title titleAlign">Force graph</h6></strong>
@@ -67,7 +110,21 @@
             </div>
         </div>
     </div>
-    </div>
+    <footer id="footer">
+        <div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Copyright &copy;2017 Trump Quotes. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Developed by <a href="main.html">Trump Quotes</a></p>
+                </div>
+                <div class="col-md-2">
+                    <p><a href="/">Home</a> |<a href="/quotes">Quotes</a> |<a href="/graphs">Graph</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://d3js.org/d3.v4.min.js">
     </script>
     <script src="/js/grapharea.js"></script>
@@ -80,11 +137,12 @@
         var iceValue = 4.36;
         flashBankrupt();
         $(".bankrupt").html("BANKRUPT");
+
         function flashBankrupt() {
             setTimeout(redBankrupt, 700);
 
             function redBankrupt() {
-                $(".bankrupt").css("color","red");
+                $(".bankrupt").css("color", "red");
                 setTimeout(blackBankrupt, 700);
             }
 
@@ -133,9 +191,9 @@
                         numberTransition(selector, outputcolor, changeVal);
                     } else {
                         // poop, it doesn't really point to the global.  we'll have to set it manually
-                        if (selector == "ego"){
+                        if (selector == "ego") {
                             egoValue = eval(localVal) + changeVal;
-                        } else if (selector == "ice"){
+                        } else if (selector == "ice") {
                             iceValue = eval(localVal) + changeVal;
                         }
                         $("#" + selector).html(" " + eval(localVal).toFixed(2))
