@@ -54,7 +54,7 @@
     <div class="btn-group btn-group-lg" role="group">
         <button id="byId" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Filter By ID<span class="caret"></span></button>
         <div class="dropdown-menu" id="quotes-by-id">
-            {{!-- quotes by ID will be added here by script below in footer.html --}}
+            {{!-- quotes by ID will be added here by script below in footer --}}
         </div>
     </div>
 </div>
@@ -96,6 +96,8 @@
         // hide the footer
         $(".footer").hide();
     }
+
+    // add the list items for the quotes by ID button
     for (i = 1; i < 108; i++) {
         var li = $("<li>")
         var a = $("<a>");
