@@ -3,7 +3,7 @@
 /*this is the background image*/
 
 body.body {
-    background-image: url("../images/flag3.jpg");
+    background-image: url("../images/stripes.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -12,7 +12,7 @@ body.body {
 /*background-image for jumbotron*/
 
 div.jumbotron {
-    background-image: url("../images/stars3.jpg");
+    background-image: url("../images/stars.jpg");
     /*add picture of postage stamp and Trump here*/
     background-repeat: no-repeat;
     background-position: center;
