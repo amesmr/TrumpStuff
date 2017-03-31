@@ -154,6 +154,9 @@ button.btn.btn-primary.btn-sm:focus {
     font-size: 12px;
 }
 
+.nav-container {
+    width: inherit;
+}
 
 /* Show the dropdown menu on hover */
 
