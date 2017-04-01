@@ -7,7 +7,7 @@ config1.waveColor = "blue";
 config1.circleThickness = 0.2;
 config1.textVertPosition = 0.5;
 config1.waveAnimateTime = 750;
-var gauge2 = loadLiquidFillGauge("fillgauge2", 42.34, config1);
+var gauge2 = loadLiquidFillGauge("fillgauge2", 36.27, config1);
 var config2 = liquidFillGaugeDefaultSettings();
 config2.circleColor = "#D4AB6A";
 config2.textColor = "#553300";
@@ -22,13 +22,13 @@ config2.waveCount = 1;
 
 
 function NewValue() {
-    return (Math.random() * 40 + 5);
+    return (Math.random() * 20 + 15);
 }
 
 
 setInterval(function () {
     gauge2.update(NewValue());
-}, 5000);
+}, 2500);
 
 
 function liquidFillGaugeDefaultSettings() {
