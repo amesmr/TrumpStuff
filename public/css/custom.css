@@ -246,12 +246,13 @@ footer {
 
 .opaque-navbar {
     background-color: rgba(0,0,0,0.5);
-  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+  /*Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)*/
     height: 60px;
     border-bottom: 0px;
     transition: background-color .5s ease 0s;
     z-index: 20;
     font-family: 'Cinzel', serif;
+    color: white;!important;
 
 }
 
