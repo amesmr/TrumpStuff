@@ -42,10 +42,16 @@ function renderGraph() {
     }) + 25000]);
 
     g.append("g")
-        .attr("class", "xaxisWhite")
+
         .call(d3.axisBottom(x).ticks(2))
+        .append("text")
+        .attr("dy", "2em")
+        .attr("dx", "20em")
+        .attr("class", "xaxisWhite")
+        .text(`2016 TO 2017`)
+        .style("fill", "white")
         .attr("transform", "translate(0," + height + ")");
-     
+
 
     g.append("g")
 
