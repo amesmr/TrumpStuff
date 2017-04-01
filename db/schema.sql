@@ -1,6 +1,5 @@
 -- Create the database
-CREATE DATABASE trump_really;
-USE trump_really;
+USE heroku_8f7c035decea09f;
 
 -- Create the table force_tweets.
 CREATE TABLE force_tweets (
