@@ -1,6 +1,6 @@
 
 var config1 = liquidFillGaugeDefaultSettings();
-config1.circleColor = "black";
+config1.circleColor = "grey";
 config1.textColor = "red";
 config1.waveTextColor = "red";
 config1.waveColor = "blue";
