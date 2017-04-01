@@ -116,9 +116,9 @@ button.btn.btn-primary.btn-lg:active {
     color: #fff;
 }
 /*fill gauge*/
-svg#fillgauge2 {
+/*svg#fillgauge2 {
     background-color: black;
-}
+}*/
 /*Modal body and buttons*/
 
 .modal-body {
