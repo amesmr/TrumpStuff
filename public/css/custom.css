@@ -34,19 +34,21 @@ div.stamp {
     -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
     margin: auto;
 }
+.relative {
+    position: relative;
+}
 
 
-div.center {
-    /*z-index: 100;*/
+p.absolute-text {
     display: inline-block;
     position: absolute;
     color: #fff;
     margin: 10px 10px 0 0;
-    font: bold 60px Georgia, "Times New Roman", Times, serif;
-    /*text-align: right;*/
-    /*center: 30px;*/
-    top: 40px;
-    right: 755px;
+    font: bold 50px Georgia, "Times New Roman", Times, serif;
+    top: 0px;
+    right: 8px;
+    font-size: 45px;
+    
 }
 
 
@@ -61,64 +63,37 @@ h1 {
     -webkit-animation-iteration-count: 3;
 
 }
-/*there was a keyframes for "animatetop here. Lines 63-86*/
 
 
-/*jumbotron buttons*/
+
+/*Sign-up and Login Buttons*/
+
 
 button.btn.btn-primary.btn-lg {
-    border: 2px solid #0a3c59;
-    background: #9cd7ff;
-    background: -webkit-gradient(linear, left top, left bottom, from(#005e9c), to(#9cd7ff));
-    background: -webkit-linear-gradient(top, #005e9c, #9cd7ff);
-    background: -moz-linear-gradient(top, #005e9c, #9cd7ff);
-    background: -ms-linear-gradient(top, #005e9c, #9cd7ff);
-    background: -o-linear-gradient(top, #005e9c, #9cd7ff);
-    background-image: -ms-linear-gradient(top, #005e9c 0%, #9cd7ff 100%);
-    padding: 10.5px 21px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
-    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
-    box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
-    text-shadow: #7ea4bd 0 1px 0;
-    color: #fafafa;
-    font-size: 15px;
-    font-family: helvetica, serif;
-    text-decoration: none;
-    vertical-align: middle;
+    background-color:transparent;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:1px solid #fcfcfc;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Cinzel', serif;
+	font-size:18px;
+	padding:11px 16px;
+	text-decoration:none;
+	text-shadow:-1px 1px 3px #000000;
 }
 
 button.btn.btn-primary.btn-lg:hover {
-    border: 2px solid #0a3c59;
-    text-shadow: #1e4158 0 1px 0;
-    background: #3e779d;
-    background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
-    background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
-    background: -moz-linear-gradient(top, #65a9d7, #3e779d);
-    background: -ms-linear-gradient(top, #65a9d7, #3e779d);
-    background: -o-linear-gradient(top, #65a9d7, #3e779d);
-    background-image: -ms-linear-gradient(top, #65a9d7 0%, #3e779d 100%);
-    color: #fff;
+    background-color:transparent;
 }
 
 button.btn.btn-primary.btn-lg:active {
-    text-shadow: #1e4158 0 1px 0;
-    border: 2px solid #0a3c59;
-    background: #65a9d7;
-    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#3e779d));
-    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-    background: -o-linear-gradient(top, #3e779d, #65a9d7);
-    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
-    color: #fff;
+    position:relative;
+	top:1px;
 }
-/*fill gauge*/
-svg#fillgauge2 {
-    background-color: black;
-}
+
 /*Modal body and buttons*/
 
 .modal-body {
@@ -139,6 +114,7 @@ button.btn.btn-primary.btn-lg:focus {
 
 .nav-container {
     width: inherit;
+
 }
 
 /* Show the dropdown menu on hover */
@@ -148,45 +124,9 @@ button.btn.btn-primary.btn-lg:focus {
 }
 
 
-/*modal decoration*/
+/*modal decoration. We made the modal opaque here. The higher the number the less opaque*/
 
-div.modal-body {
-    border: 3px solid #a5a5b8;
-    background: #09002e;
-    background: -webkit-gradient(linear, left top, left bottom, from(#0537ff), to(#09002e));
-    background: -webkit-linear-gradient(top, #0537ff, #09002e);
-    background: -moz-linear-gradient(top, #0537ff, #09002e);
-    background: -ms-linear-gradient(top, #0537ff, #09002e);
-    background: -o-linear-gradient(top, #0537ff, #09002e);
-    background-image: -ms-linear-gradient(top, #0537ff 0%, #09002e 100%);
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    -webkit-box-shadow: rgba(000, 000, 000, 0.9) 0 1px 2px, inset rgba(255, 255, 255, 0.4) 0 1px 0;
-    -moz-box-shadow: rgba(000, 000, 000, 0.9) 0 1px 2px, inset rgba(255, 255, 255, 0.4) 0 1px 0;
-    box-shadow: rgba(000, 000, 000, 0.9) 0 1px 2px, inset rgba(255, 255, 255, 0.4) 0 1px 0;
-    font-family: 'Helvetica Neue', Helvetica, sans-serif;
-    text-decoration: none;
-    vertical-align: middle;
-    min-width: 300px;
-    padding: 20px;
-    width: 300px;
-}
 
-div.form-group {
-    border: 2px solid #c9b7a2;
-    background: #e4d5c3;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    color: #000000;
-    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(000, 000, 000, 0.7) 0 0px 0px;
-    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(000, 000, 000, 0.7) 0 0px 0px;
-    box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(000, 000, 000, 0.7) 0 0px 0px;
-    padding: 8px;
-    margin-bottom: 20px;
-    /* width: 280px; */
-}
 
 div.modal-form-group,
 div.modal-dialog {
@@ -194,7 +134,8 @@ div.modal-dialog {
 }
 
 div.modal-content {
-    background-color: transparent;
+    background-color: darkgray;
+    opacity: .9;
     width: 320px;
 }
 
@@ -221,80 +162,6 @@ div.modal-content {
     margin: 8px 0;
     text-align: right;
 }
-button.btn.btn-primary.submit {
-    border: 1px solid #447314;
-    background: #182987;
-    background: -webkit-gradient(linear, left top, left bottom, from(#d4d9ff), to(#182987));
-    background: -webkit-linear-gradient(top, #d4d9ff, #182987);
-    background: -moz-linear-gradient(top, #d4d9ff, #182987);
-    background: -ms-linear-gradient(top, #d4d9ff, #182987);
-    background: -o-linear-gradient(top, #d4d9ff, #182987);
-    background-image: -ms-linear-gradient(top, #d4d9ff 0%, #182987 100%);
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    -webkit-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
-    -moz-box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
-    box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0, inset rgba(255, 255, 255, 0.4) 0 1px 0;
-    text-shadow: #678c42 0 1px 0;
-    color: #000000;
-    font-family: helvetica, serif;
-    padding: 8.5px 18px;
-    font-size: 14px;
-    text-decoration: none;
-    vertical-align: middle;
-}
-
-button.btn.btn-primary.submit:hover {
-    border: 1px solid #03061f;
-    text-shadow: #030500 0 1px 0;
-    background: #2847ad;
-    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#2847ad));
-    background: -webkit-linear-gradient(top, #000000, #2847ad);
-    background: -moz-linear-gradient(top, #000000, #2847ad);
-    background: -ms-linear-gradient(top, #000000, #2847ad);
-    background: -o-linear-gradient(top, #000000, #2847ad);
-    background-image: -ms-linear-gradient(top, #000000 0%, #2847ad 100%);
-    color: #fff;
-}
-
-button.btn.btn-primary.submit:active {
-    text-shadow: #020300 0 1px 0;
-    border: 1px solid #000000;
-    background: #1827f5;
-    background: -webkit-gradient(linear, left top, left bottom, from(#b5b5b5), to(#2847ad));
-    background: -webkit-linear-gradient(top, #b5b5b5, #1827f5);
-    background: -moz-linear-gradient(top, #b5b5b5, #1827f5);
-    background: -ms-linear-gradient(top, #b5b5b5, #1827f5);
-    background: -o-linear-gradient(top, #b5b5b5, #1827f5);
-    background-image: -ms-linear-gradient(top, #b5b5b5 0%, #1827f5 100%);
-    color: #fff;
-}
-
-button.btn.btn-primary.submit:focus {
-    outline: 0;
-}
-
-
-/*End modal*/
-
-/*body {
-    font-family: 'Open Sans', sans-serif;
-    color: #7c77a5;
-}
-
-.body {
-    background-color: #003366;
-}
-
-.container {
-    background-color: #767570;
-    padding-bottom: 8px;
-}
-
-.neutral {
-    background-color: #D8D5C9 !important;
-}*/
 
 
 /* STRUCTURE */
@@ -376,13 +243,14 @@ footer {
 .navbar-toggle,
 .nav-container
 .navbar {
-    border: 1px solid darkslategray;
+    opacity:0.4;/*come back to this section in order to make navbar translucent*/
+    /*border: 1px solid darkslategray;
     background: #182987;
     background: -webkit-gradient(linear, left top, left bottom, from(#d4d9ff), to(#182987));
     background: -webkit-linear-gradient(top, #d4d9ff, #182987);
     background: -moz-linear-gradient(top, #d4d9ff, #182987);
     background: -ms-linear-gradient(top, #d4d9ff, #182987);
-    background: -o-linear-gradient(top, #d4d9ff, #182987);
+    background: -o-linear-gradient(top, #d4d9ff, #182987);*/
     background-image: -ms-linear-gradient(top, #d4d9ff 0%, #182987 100%);
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -392,6 +260,11 @@ footer {
     font-size: 14px;
     text-decoration: none;
     vertical-align: middle;
+    /*this is a test to make the navbar transparent*/
+    /*background-color: transparent;
+    background: transparent;
+    border-color: transparent;*/
+    z-index: 50;
 }
 
 .dropdown-toggle,
@@ -483,4 +356,5 @@ MEDIA QUERIES
         display: none;
     }
 }
+
 
