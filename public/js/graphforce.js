@@ -22,19 +22,164 @@
 
 
        var forceDataArray = [];
-       //    getthedata();
+       getthedata();
        var nodesArray = [];
        var linksArray = [{
+               // crosslinks
+               source: 10,
+               target: 7,
+               linkType: "crosslinktweetend"
+           },
+           // NICKNAME BRANCH 
+           {
                source: 0,
                target: 1,
-               distance: 100
+               linkType: "donaldlayer1"
            },
+           // ----------------- layer1branches
            {
                source: 1,
                target: 2,
-               distance: 25
+               linkType: "layer1layer2"
+           }, {
+               source: 1,
+               target: 3,
+               linkType: "layer1layer2"
+           }, {
+               source: 1,
+               target: 4,
+               linkType: "layer1layer2"
+           }, {
+               source: 1,
+               target: 5,
+               linkType: "layer1layer2"
+           }, {
+               source: 1,
+               target: 6,
+               linkType: "layer1layer2"
+           }, {
+               source: 1,
+               target: 7,
+               linkType: "layer1layer2"
+           },
+           //-------lyin ted
+           {
+               source: 5,
+               target: 8,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 9,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 10,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 11,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 12,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 13,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 14,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 15,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 16,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 17,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 18,
+               linkType: "tweetend"
+           }, {
+               source: 5,
+               target: 19,
+               linkType: "tweetend"
+           },
+
+           // -------- little marco
+           {
+               source: 4,
+               target: 20,
+               linkType: "tweetend"
+           }, {
+               source: 4,
+               target: 21,
+               linkType: "tweetend"
+           }, {
+               source: 4,
+               target: 22,
+               linkType: "tweetend"
+           }, {
+               source: 4,
+               target: 23,
+               linkType: "tweetend"
+           }, {
+               source: 4,
+               target: 24,
+               linkType: "tweetend"
+           }, {
+               source: 4,
+               target: 25,
+               linkType: "tweetend"
+           }, {
+               source: 4,
+               target: 26,
+               linkType: "tweetend"
+           }, {
+               source: 4,
+               target: 27,
+               linkType: "tweetend"
+           },
+           // ------- crazy bernie
+           {
+               source: 6,
+               target: 28,
+               linkType: "tweetend"
+           }, {
+               source: 6,
+               target: 29,
+               linkType: "tweetend"
+           }, {
+               source: 6,
+               target: 30,
+               linkType: "tweetend"
            }
        ];
+
+       var x = linksArray.length;
+       for (var i = 0; i < x; i++) {
+           switch (linksArray[i].linkType) {
+               case "donaldlayer1":
+                   linksArray[i].distance = 110;
+                   break;
+               case "layer1layer2":
+                   linksArray[i].distance = 85;
+                   break;
+               case "tweetend":
+                   linksArray[i].distance = 25;
+                   break;
+               case "crosslinktweetend":
+                   linksArray[i].distance = 25;
+                   break;
+           }
+       }
 
        function getthedata() {
            $.ajax({
@@ -56,188 +201,16 @@
 
 
 
-    //    function layout() {
-    //        var parsedData = {
-    //            nodes: nodesArray,
-    //            links: linksArray
-    //        };
+       function layout() {
            var parsedData = {
-               nodes: [{
-
-                       name: "ROOT",
-                       color: "white",
-                       size: 20,
-                       layer: 0,
-                       index: 0
-
-                   },
-
-                   // main branches
-                   {
-                       name: "himself",
-                       color: "red",
-                       size: 10,
-                       layer: 1,
-                       index: 1
-
-
-                   },
-                   {
-                       name: "defenses",
-                       color: "green",
-                       size: 10,
-                       layer: 1,
-                       index: 2
-
-                   },
-                   {
-                       name: "celebrity",
-                       color: "yellow",
-                       size: 10,
-                       layer: 1,
-                       index: 3
-
-                   }, {
-                       name: "debates",
-                       color: "brown",
-                       size: 10,
-                       layer: 1,
-                       index: 4
-
-                   }, {
-                       name: "clintons",
-                       color: "grey",
-                       size: 10,
-                       layer: 1,
-                       index: 5
-
-                   }, {
-                       name: "nicknames",
-                       color: "lawngreen",
-                       size: 10,
-                       layer: 1,
-                       index: 6
-
-                   },
-
-                   // level 2 branches
-
-                   {
-                       name: "Little Marco",
-                       color: "violet",
-                       size: 5,
-                       layer: 2,
-                       index: 7
-
-                   }, {
-                       name: "Lyin Ted",
-                       color: "violet",
-                       size: 5,
-                       layer: 2,
-                       index: 8
-
-                   }, {
-                       name: "Crooked Hillary",
-                       color: "violet",
-                       size: 5,
-                       layer: 2,
-                       index: 9
-
-                   }, {
-                       name: "Low energy Jeb",
-                       color: "violet",
-                       size: 5,
-                       layer: 2,
-                       index: 10
-
-                   },
-                   // third layer
-                   {
-                       name: "jeb off stage",
-                       color: "green",
-                       size: 5,
-                       layer: 3,
-                       index: 11
-
-                   }, {
-                       name: "tough guy",
-                       color: "green",
-                       size: 5,
-                       layer: 3,
-                       index: 12
-
-                   }, {
-                       name: "real tough guy",
-                       color: "green",
-                       size: 5,
-                       layer: 3,
-                       index: 13
-                   }
-               ],
-               links: [{
-                       source: 0,
-                       target: 1,
-                       sourceText: "root",
-                       targetText: "himself",
-                       linkType: "main",
-                       distance: 100
-                   },
-                   {
-                       source: 0,
-                       target: 2,
-                       distance: 100
-                   },
-                   {
-                       source: 0,
-                       target: 3,
-                       distance: 100
-                   }, {
-                       source: 0,
-                       target: 4,
-                       distance: 100
-                   }, {
-                       source: 0,
-                       target: 5,
-                       distance: 100
-                   }, {
-                       source: 0,
-                       target: 6,
-                       distance: 100
-                   }, {
-                       source: 0,
-                       target: 7,
-                       distance: 100
-                   }, {
-                       source: 6,
-                       target: 8,
-                       distance: 75
-                   }, {
-                       source: 6,
-                       target: 9,
-                       distance: 75
-                   }, {
-                       source: 6,
-                       target: 10,
-                       distance: 75
-                   }, {
-                       source: 6,
-                       target: 11,
-                       distance: 75
-                   }, {
-                       source: 11,
-                       target: 12,
-                       distance: 75
-                   }, {
-                       source: 11,
-                       target: 13,
-                       distance: 75
-                   }
-               ]
+               nodes: nodesArray,
+               links: linksArray
            };
 
 
-           var width = 1200;
-           var height = 700;
+
+           var width = 700;
+           var height = 500;
 
            var svg = d3.select("#force")
                .attr("width", width)
@@ -247,7 +220,7 @@
                .force("link", d3.forceLink().distance(function (d) {
                    return d.distance;
                }).strength(2))
-               //  .force("center", d3.forceCenter(width / 2, height / 2))
+               .force("center", d3.forceCenter(width / 2, height / 2))
                .force("charge", d3.forceManyBody());
 
 
@@ -261,7 +234,39 @@
            var link = svg.selectAll(".link")
                .data(parsedData.links)
                .enter().append("line")
-               .attr("class", "link");
+               .attr("class", "link")
+               .style("stroke", function (d) {
+                   switch (d.linkType) {
+                       case "donaldlayer1":
+                           return "yellow";
+                           break;
+                       case "layer1layer2":
+                           return "blue";
+                           break;
+                       case "tweetend":
+                           return "lawngreen";
+                           break;
+                       case "crosslinktweetend":
+                           return "red";
+                           break;
+                   }
+               })
+               .style("stroke-width", function (d) {
+                   switch (d.linkType) {
+                       case "donaldlayer1":
+                           return "4px";
+                           break;
+                       case "layer1layer2":
+                           return "2px";
+                           break;
+                       case "tweetend":
+                           return "1px";
+                           break;
+                       case "crosslinktweetend":
+                           return "2px";
+                           break;
+                   }
+               });
 
 
            var node = svg.selectAll(".node")
@@ -277,27 +282,41 @@
            node.append("circle")
                .attr("class", "forceCircle")
                .attr("r", function (d) {
-                   if (d.size > 19) {
-                       return 8;
+                   if (d.name === "ROOT") {
+                       return 35;
+                   } else if (d.name === "NICKNAMES") {
+                       return 7;
                    } else {
-                       return 4;
+                       return 3
                    }
                })
                .style("fill", function (d) {
-                   return d.color;
+                   if (d.name === "ROOT") {
+                       return "transparent";
+                   } else {
+                       return "red";
+                   }
                });
 
-           // .attr("x", -8)
-           // .attr("y", -8)
-           // .attr("width", 16)
-           // .attr("height", 16);
+           node.append("image")
+               .attr("xlink:href", function (d) {
+                   if (d.linkType === "donald") {
+                       return "https://1minutecandidate.co/wp-content/uploads/2015/09/300px-Donald-Trump-circle.png";
+                   }
+
+               })
+               .attr("x", -35)
+               .attr("y", -35)
+               .attr("width", 70)
+               .attr("height", 70);
+
 
            node.append("text")
                .attr("dx", 12)
                .attr("dy", ".35em")
                .text(function (d) {
                    var str = d.name;
-                   if (str.length > 25) {
+                   if (str.length > 25 || d.linkType === "donald") {
                        return "";
                    } else {
                        return str.toUpperCase();
@@ -309,7 +328,7 @@
                            return "16px";
                            break;
                        case 1:
-                           return "11px";
+                           return "13px";
                            break;
                        case 2:
                            return "9px";
@@ -386,3 +405,4 @@
                d.fx = null;
                d.fy = null;
            }
+       }
