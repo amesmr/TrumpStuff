@@ -125,11 +125,6 @@ svg#fillgauge2 {
     padding: 7px;
 }
 
-.modal-dialog {
-    position: relative;
-    width: auto;
-}
-
 button.btn.btn-primary.btn-lg:focus {
     outline: 0;
 }
@@ -193,7 +188,8 @@ div.form-group {
     /* width: 280px; */
 }
 
-div.modal-form-group {
+div.modal-form-group,
+div.modal-dialog {
     width: 320px;
 }
 
