@@ -2,6 +2,11 @@
 
 /*this is the background image*/
 
+div.container.nav-container {
+    margin-bottom: 0;
+    
+}
+
 body.body {
     background-image: url("../images/stripes.png");
     background-size: cover;
@@ -17,7 +22,10 @@ div.jumbotron {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
+    margin-bottom: 0;
+    margin-top: 0;
+    
+    
 }
 
 
@@ -34,10 +42,10 @@ div.stamp {
     -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, .5));
     margin: auto;
 }
+
 .relative {
     position: relative;
 }
-
 
 p.absolute-text {
     display: inline-block;
@@ -48,7 +56,6 @@ p.absolute-text {
     top: 0px;
     right: 8px;
     font-size: 45px;
-    
 }
 
 
@@ -61,38 +68,36 @@ h1 {
     -webkit-animation-duration: 1s;
     -webkit-animation-delay: 4s;
     -webkit-animation-iteration-count: 3;
-
 }
-
 
 
 /*Sign-up and Login Buttons*/
 
-
 button.btn.btn-primary.btn-lg {
-    background-color:transparent;
-	-moz-border-radius:42px;
-	-webkit-border-radius:42px;
-	border-radius:42px;
-	border:1px solid #fcfcfc;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:'Cinzel', serif;
-	font-size:18px;
-	padding:11px 16px;
-	text-decoration:none;
-	text-shadow:-1px 1px 3px #000000;
+    background-color: transparent;
+    -moz-border-radius: 42px;
+    -webkit-border-radius: 42px;
+    border-radius: 42px;
+    border: 1px solid #fcfcfc;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    padding: 11px 16px;
+    text-decoration: none;
+    text-shadow: -1px 1px 3px #000000;
 }
 
 button.btn.btn-primary.btn-lg:hover {
-    background-color:transparent;
+    background-color: transparent;
 }
 
 button.btn.btn-primary.btn-lg:active {
-    position:relative;
-	top:1px;
+    position: relative;
+    top: 1px;
 }
+
 
 /*Modal body and buttons*/
 
@@ -114,8 +119,11 @@ button.btn.btn-primary.btn-lg:focus {
 
 .nav-container {
     width: inherit;
+    margin-bottom: 0;
+    
 
 }
+
 
 /* Show the dropdown menu on hover */
 
@@ -125,8 +133,6 @@ button.btn.btn-primary.btn-lg:focus {
 
 
 /*modal decoration. We made the modal opaque here. The higher the number the less opaque*/
-
-
 
 div.modal-form-group,
 div.modal-dialog {
@@ -219,7 +225,6 @@ aside#sidebar {
     color: white;
 }
 
-
 .panel-body,
 .quote-label {
     /*text-align: center;*/
@@ -237,58 +242,19 @@ footer {
     background-color: #D8D5C9;
 }
 
-.dropdown-toggle,
-.btn-link,
-.navbar-brand,
-.navbar-toggle,
-.nav-container
-.navbar {
-    opacity:0.4;/*come back to this section in order to make navbar translucent*/
-    /*border: 1px solid darkslategray;
-    background: #182987;
-    background: -webkit-gradient(linear, left top, left bottom, from(#d4d9ff), to(#182987));
-    background: -webkit-linear-gradient(top, #d4d9ff, #182987);
-    background: -moz-linear-gradient(top, #d4d9ff, #182987);
-    background: -ms-linear-gradient(top, #d4d9ff, #182987);
-    background: -o-linear-gradient(top, #d4d9ff, #182987);*/
-    background-image: -ms-linear-gradient(top, #d4d9ff 0%, #182987 100%);
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    color: white;
-    font-family: helvetica, serif;
-    font-size: 14px;
-    text-decoration: none;
-    vertical-align: middle;
-    /*this is a test to make the navbar transparent*/
-    /*background-color: transparent;
-    background: transparent;
-    border-color: transparent;*/
-    z-index: 50;
+
+
+.opaque-navbar {
+    background-color: rgba(0,0,0,0.5);
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 60px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+    z-index: 20;
+    font-family: 'Cinzel', serif;
+
 }
 
-.dropdown-toggle,
-.btn-link,
-.navbar-brand,
-.navbar-toggle,
-.nav-container .navbar {
-    border: 1px solid darkslategray;
-    background: #182987;
-    background: -webkit-gradient(linear, left top, left bottom, from(#d4d9ff), to(#182987));
-    background: -webkit-linear-gradient(top, #d4d9ff, #182987);
-    background: -moz-linear-gradient(top, #d4d9ff, #182987);
-    background: -ms-linear-gradient(top, #d4d9ff, #182987);
-    background: -o-linear-gradient(top, #d4d9ff, #182987);
-    background-image: -ms-linear-gradient(top, #d4d9ff 0%, #182987 100%);
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    color: white;
-    font-family: helvetica, serif;
-    font-size: 14px;
-    text-decoration: none;
-    vertical-align: middle;
-}
 
 /************************************************************************************
 MEDIA QUERIES
@@ -356,5 +322,3 @@ MEDIA QUERIES
         display: none;
     }
 }
-
-
