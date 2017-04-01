@@ -211,55 +211,23 @@ line.link {
     cursor: pointer;
 }
 
-.dropdown-toggle,
-.btn-link,
-.navbar-brand,
-.navbar-toggle,
-.nav-container .navbar {
-    opacity: 0.4;
-    /*come back to this section in order to make navbar translucent*/
-    /*border: 1px solid darkslategray;
-    background: #182987;
-    background: -webkit-gradient(linear, left top, left bottom, from(#d4d9ff), to(#182987));
-    background: -webkit-linear-gradient(top, #d4d9ff, #182987);
-    background: -moz-linear-gradient(top, #d4d9ff, #182987);
-    background: -ms-linear-gradient(top, #d4d9ff, #182987);
-    background: -o-linear-gradient(top, #d4d9ff, #182987);*/
-    background-image: -ms-linear-gradient(top, #d4d9ff 0%, #182987 100%);
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    color: white;
-    font-family: helvetica, serif;
-    font-size: 14px;
-    text-decoration: none;
-    vertical-align: middle;
-    /*this is a test to make the navbar transparent*/
-    /*background-color: transparent;
-    background: transparent;
-    border-color: transparent;*/
-    z-index: 50;
+div.container.nav-container {
+    margin-bottom: 0;
 }
 
-.dropdown-toggle,
-.btn-link,
-.navbar-brand,
-.navbar-toggle,
-.nav-container .navbar {
-    border: 1px solid darkslategray;
-    background: #182987;
-    background: -webkit-gradient(linear, left top, left bottom, from(#d4d9ff), to(#182987));
-    background: -webkit-linear-gradient(top, #d4d9ff, #182987);
-    background: -moz-linear-gradient(top, #d4d9ff, #182987);
-    background: -ms-linear-gradient(top, #d4d9ff, #182987);
-    background: -o-linear-gradient(top, #d4d9ff, #182987);
-    background-image: -ms-linear-gradient(top, #d4d9ff 0%, #182987 100%);
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
+.nav-container {
+    width: inherit;
+    margin-bottom: 0;
+}
+
+.opaque-navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    /*Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)*/
+    height: 60px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+    z-index: 20;
+    font-family: 'Cinzel', serif;
     color: white;
-    font-family: helvetica, serif;
-    font-size: 14px;
-    text-decoration: none;
-    vertical-align: middle;
+    !important;
 }
