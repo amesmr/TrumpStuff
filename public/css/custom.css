@@ -125,6 +125,12 @@ svg#fillgauge2 {
     padding: 7px;
 }
 
+.modal-dialog {
+    position: relative;
+    width: auto;
+    /* margin: 10px; */
+}
+
 button.btn.btn-primary.btn-lg:focus {
     outline: 0;
 }
