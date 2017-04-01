@@ -128,7 +128,6 @@ svg#fillgauge2 {
 .modal-dialog {
     position: relative;
     width: auto;
-    /* margin: 10px; */
 }
 
 button.btn.btn-primary.btn-lg:focus {
