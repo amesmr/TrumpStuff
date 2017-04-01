@@ -104,7 +104,12 @@
             g.append("g")
                 .attr("transform", "translate(0," + height + ")")
                 .call(d3.axisBottom(x))
-                .attr("class", "xaxisWhite");
+                .append("text")
+                 .attr("dy", "2em")
+                  .attr("dx", "45em")
+                .attr("class", "xaxisWhite")
+                .text(`2009 TO 2017`)
+                .style("fill", "white");
 
 
             g.append("g")
@@ -119,7 +124,8 @@
             svg.selectAll("dot")
                 .data(dataArray)
                 .enter().append("circle")
-                .attr("r", 2)
+                .attr("r", 10)
+                .style("fill", "transparent")
                 .attr("cx", function (d) {
                     return x(d.tweet_date);
                 })

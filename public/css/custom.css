@@ -4,7 +4,6 @@
 
 div.container.nav-container {
     margin-bottom: 0;
-    
 }
 
 body.body {
@@ -24,8 +23,6 @@ div.jumbotron {
     background-size: cover;
     margin-bottom: 0;
     margin-top: 0;
-    
-    
 }
 
 
@@ -94,9 +91,25 @@ button.btn.btn-primary.btn-lg:hover {
 }
 
 button.btn.btn-primary.btn-lg:active {
-    position: relative;
-    top: 1px;
+    text-shadow: #1e4158 0 1px 0;
+    border: 2px solid #0a3c59;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#3e779d));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+    color: #fff;
 }
+
+
+/*fill gauge*/
+
+
+/*svg#fillgauge2 {
+    background-color: black;
+}*/
 
 
 /*Modal body and buttons*/
@@ -120,8 +133,6 @@ button.btn.btn-primary.btn-lg:focus {
 .nav-container {
     width: inherit;
     margin-bottom: 0;
-    
-
 }
 
 
@@ -133,7 +144,6 @@ button.btn.btn-primary.btn-lg:focus {
 
 
 /*modal decoration. We made the modal opaque here. The higher the number the less opaque*/
-
 
 div.modal-form-group,
 div.modal-dialog {
@@ -243,18 +253,16 @@ footer {
     background-color: #D8D5C9;
 }
 
-
-
 .opaque-navbar {
-    background-color: rgba(0,0,0,0.5);
-  /*Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)*/
+    background-color: rgba(0, 0, 0, 0.5);
+    /*Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)*/
     height: 60px;
     border-bottom: 0px;
     transition: background-color .5s ease 0s;
     z-index: 20;
     font-family: 'Cinzel', serif;
-    color: white;!important;
-
+    color: white;
+    !important;
 }
 
 

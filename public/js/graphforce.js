@@ -19,19 +19,17 @@
            this.distance = distance;
        }
 
-
+       //            // crosslinks
+       //            source: 10,
+       //            target: 7,
+       //            linkType: "crosslinktweetend"
+       //        },
 
        var forceDataArray = [];
        getthedata();
        var nodesArray = [];
        var linksArray = [{
-               // crosslinks
-               source: 10,
-               target: 7,
-               linkType: "crosslinktweetend"
-           },
-           // NICKNAME BRANCH 
-           {
+
                source: 0,
                target: 1,
                linkType: "donaldlayer1"
@@ -41,23 +39,28 @@
                source: 1,
                target: 2,
                linkType: "layer1layer2"
-           }, {
+           },
+           {
                source: 1,
                target: 3,
                linkType: "layer1layer2"
-           }, {
+           },
+           {
                source: 1,
                target: 4,
                linkType: "layer1layer2"
-           }, {
+           },
+           {
                source: 1,
                target: 5,
                linkType: "layer1layer2"
-           }, {
+           },
+           {
                source: 1,
                target: 6,
                linkType: "layer1layer2"
-           }, {
+           },
+           {
                source: 1,
                target: 7,
                linkType: "layer1layer2"
@@ -67,47 +70,58 @@
                source: 5,
                target: 8,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 9,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 10,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 11,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 12,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 13,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 14,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 15,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 16,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 17,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 18,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 5,
                target: 19,
                linkType: "tweetend"
@@ -118,31 +132,38 @@
                source: 4,
                target: 20,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 4,
                target: 21,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 4,
                target: 22,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 4,
                target: 23,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 4,
                target: 24,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 4,
                target: 25,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 4,
                target: 26,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 4,
                target: 27,
                linkType: "tweetend"
@@ -152,15 +173,53 @@
                source: 6,
                target: 28,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 6,
                target: 29,
                linkType: "tweetend"
-           }, {
+           },
+           {
                source: 6,
                target: 30,
                linkType: "tweetend"
            }
+
+           // ------- PERSONAL ATTACKS
+
+        //    {
+        //        source: 37,
+        //        target: 36,
+        //        linkType: "donaldlayer1"
+        //    }
+        //    {
+        //        source: 37,
+        //        target: 38,
+        //        linkType: "layer1layer2"
+        //    },
+        //    {
+        //        source: 37,
+        //        target: 39,
+        //        linkType: "layer1layer2"
+        //    }, {
+        //        source: 37,
+        //        target: 40,
+        //        linkType: "layer1layer2"
+        //    },
+        //    {
+        //        source: 37,
+        //        target: 41,
+        //        linkType: "layer1layer2"
+        //    }, {
+        //        source: 37,
+        //        target: 42,
+        //        linkType: "layer1layer2"
+        //    },
+        //    {
+        //        source: 37,
+        //        target: 43,
+        //        linkType: "layer1layer2"
+        //    }
        ];
 
        var x = linksArray.length;
@@ -282,12 +341,33 @@
            node.append("circle")
                .attr("class", "forceCircle")
                .attr("r", function (d) {
-                   if (d.name === "ROOT") {
-                       return 35;
-                   } else if (d.name === "NICKNAMES") {
-                       return 7;
-                   } else {
-                       return 3
+                   switch (d.name) {
+                       case "ROOT":
+                           return 35;
+                           break;
+                       case "ROSIE O'DONNELL":
+                           return 3;
+                           break;
+                       case "HILLARY CLINTON":
+                           return 3;
+                           break;
+                       case "RAND PAUL":
+                           return 3;
+                           break;
+                       case "JEB BUSH":
+                           return 3;
+                           break;
+                       case "MARCO RUBIO":
+                           return 3;
+                           break;
+                       case "NICKNAMES":
+                           return 7;
+                           break;
+                       case "PERSONAL ATTACKS":
+                           return 3;
+                           break;
+                       default:
+                           return 3;
                    }
                })
                .style("fill", function (d) {
@@ -300,8 +380,12 @@
 
            node.append("image")
                .attr("xlink:href", function (d) {
-                   if (d.linkType === "donald") {
-                       return "https://1minutecandidate.co/wp-content/uploads/2015/09/300px-Donald-Trump-circle.png";
+                   switch (d.name) {
+                       case "ROOT":
+                           return "https://1minutecandidate.co/wp-content/uploads/2015/09/300px-Donald-Trump-circle.png";
+                           break;
+                       default:
+                           return;
                    }
 
                })
@@ -309,6 +393,32 @@
                .attr("y", -35)
                .attr("width", 70)
                .attr("height", 70);
+
+        //    node.append("image")
+        //        .attr("xlink:href", function (d) {
+        //            switch (d.name) {
+        //                case "HILLARY CLINTON":
+        //                    return "http://www.theskimm.com/assets/elections/headshot_hillary-85c300a86beccd74b7d461a1e7628828.png";
+        //                    break;
+        //                case "ROSIE O'DONNELL":
+        //                    return "http://media.news.com.au/nnd//dce11461095ee66ecbcb72b6a8ca05c2/desktop/assets/rosie-o-donnell.png";
+        //                    break;
+        //                case "MARCO RUBIO":
+        //                    return "https://www.speedybuttons.com/shop/image/Campaign/Rubio-304.png";
+        //                    break;
+        //                case "JEB BUSH":
+        //                    return "http://www.theskimm.com/assets/elections/headshot_jeb-252f01aa89620129c70f0afbf736bc33.png";
+        //                    break;
+        //                case "RAND PAUL":
+        //                    return "http://www.theskimm.com/assets/elections/headshot_rand-8f498b45648fad22a992b9d999e895fc.png";
+        //                    break;
+        //            }
+
+        //        })
+        //        .attr("x", -17)
+        //        .attr("y", -17)
+        //        .attr("width", 34)
+        //        .attr("height", 34);
 
 
            node.append("text")
