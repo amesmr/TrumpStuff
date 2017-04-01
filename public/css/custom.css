@@ -128,7 +128,8 @@ button.btn.btn-primary.btn-lg:focus {
 
 
 
-div.modal-form-group {
+div.modal-form-group,
+div.modal-dialog {
     width: 320px;
 }
 
