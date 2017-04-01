@@ -1,10 +1,11 @@
 {
     "development": {
-        "username": "root",
-        "password": "root",
-        "database": "trump_really",
+        "username": "bfdc3bdaf3a955",
+        "password": "05668af3",
+        "database": "heroku_1cf9368ec35a4eb",
         "port": "3306",
-        "dialect": "mysql"
+        "dialect": "mysql",
+        "host": "us-cdbr-iron-east-03.cleardb.net"
     },
     "test": {
         "username": "root",
@@ -14,10 +15,11 @@
         "dialect": "mysql"
     },
     "production": {
-        "username": "root",
-        "password": "root",
-        "database": "trump_really",
+        "username": "be7a557ed0bc6d",
+        "password": "e899298d",
+        "database": "heroku_8f7c035decea09f",
         "port": "3306",
-        "dialect": "mysql"
+        "dialect": "mysql",
+        "host": "us-cdbr-iron-east-03.cleardb.net"
     }
 }
