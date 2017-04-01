@@ -134,6 +134,7 @@ button.btn.btn-primary.btn-lg:focus {
 
 /*modal decoration. We made the modal opaque here. The higher the number the less opaque*/
 
+
 div.modal-form-group,
 div.modal-dialog {
     width: 320px;
